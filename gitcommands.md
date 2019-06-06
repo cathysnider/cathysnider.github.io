@@ -1,4 +1,5 @@
 ---
+title: Git Basics and Commands
 layout: default
 ---
 
@@ -56,6 +57,5 @@ git Reset: specifies where the head pointer should point. Very powerful and can 
 * --mixed (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
 * --hard (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
 
-_yay_
 
 [back](./)

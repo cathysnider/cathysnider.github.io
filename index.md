@@ -1,4 +1,5 @@
 ---
+title: Working with Git and GitHub
 layout: default
 ---
 
