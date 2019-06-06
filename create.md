@@ -2,7 +2,9 @@
 layout: default
 ---
 
-# Creating a New Repository
+# Working with Repositories
+
+## Create a New Local Repository
 
 Two ways: by cloning someone else's work or using your own
 
@@ -19,7 +21,7 @@ echo "# MyRepoName" >> README.md
 git init
 touch .gitignore (creates an empty .gitignore file in root of project directory)
 add any binary files to the .gitignore file"
-echo "/images/*" >> .gitignore
+echo "/images/wildcard" >> .gitignore
 Screw up the GitIgnore at your peril.
 
 b) Commit everything to the repository
