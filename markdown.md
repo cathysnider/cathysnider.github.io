@@ -1,4 +1,5 @@
 ---
+title: All About Markdown
 layout: default
 ---
 
@@ -19,6 +20,6 @@ layout: default
 ## Emphasis
 {% include 05-emphasis.md %}
 
-_yay_
+
 
 [back](./)
