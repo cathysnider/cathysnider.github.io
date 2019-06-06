@@ -35,3 +35,7 @@ The repository must exist on GitHub<br />
 Go to GitHub and create the repository; copy its URL<br />
 git remote add origin https://github.com/cathysnider/myNewRepo.git<br />
 git push -u origin master<br />
+
+_yay_
+
+[back](./)
