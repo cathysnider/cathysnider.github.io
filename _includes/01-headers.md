@@ -1,17 +1,6 @@
-# An H1 Header
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-## H2 Header
-Menean congue consequat erat, eget ornare libero posuere sit amet.
-
-### H3 Header
-Cras vel urna ut risus feugiat semper ut vitae enim.
-
-#### H4 Header
-Proin et ex egestas, rhoncus sem blandit, efficitur ipsum.
-
-##### H5 Header
-Praesent pulvinar in sapien sit amet tempor.
-
-###### H6 Header
-Nunc dapibus dolor et neque porta, non auctor turpis sodales. Donec ac pulvinar dui.
+# An H1 Header has 1 pound sign
+## An H2 Header has 2 pound signs
+### An H3 Header has 3 pound signs
+#### An 4 Header has 4 pound signs
+##### An H5 Header has 5 pound signs
+###### An H6 Header has 6 pound signs

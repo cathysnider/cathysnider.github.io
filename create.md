@@ -17,11 +17,10 @@ a) Initialize the project directory as a Git Repository
 In root of directory you want to start tracking:
 echo "# MyRepoName" >> README.md
 git init
-cd .git
-touch .gitignore (creates an empty .gitignore file); 
+touch .gitignore (creates an empty .gitignore file in root of project directory)
 add any binary files to the .gitignore file"
 echo "/images/*" >> .gitignore
-Screw up the GitIgnore at your peril. 
+Screw up the GitIgnore at your peril.
 
 b) Commit everything to the repository
 git add .
