@@ -1,14 +1,13 @@
+---
 
+- link: /
+  name: Home
 
+- link: create.html
+  name: Creating a New Repository
 
--name: Home
- link: /
+- link: markdown.html
+  name: All About Markdown
 
-- name: Creating a New Repository
-  link: create.html
-
-- name: All About Markdown
-  link: markdown.html
-
-- name: Git Basics and Commands
-  link: gitcommands.html)
+- link: gitcommands.html
+  name: Git Basics and Commands
