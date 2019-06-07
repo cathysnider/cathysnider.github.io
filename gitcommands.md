@@ -54,7 +54,7 @@ Add changed file(s) to staging area:<br />
 
 
 ## Undoing Mess-ups
-`git reset` (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
+`git reset <last good SHA>` (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
 * `--soft` (leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.)
 * `--mixed` (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
 * `--hard` (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
