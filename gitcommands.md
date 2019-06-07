@@ -49,8 +49,9 @@ Add changed file(s) to staging area:<br />
 ```git add .```<br />
 ```git add <filename>```<br />
 
+```git commit -m "Explanatory Message"``` \
 [As the project drags on](https://xkcd.com/1296/)
-```git commit -m "Explanatory Message"```
+
 
 ## Undoing Mess-ups
 ```git reset``` (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
