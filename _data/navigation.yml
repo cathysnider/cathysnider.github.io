@@ -3,11 +3,11 @@
 - link: /
   name: Home
 
-- link: /create.html
-  name: Creating a New Repository
-
 - link: /markdown.html
-  name: All About Markdown
+  name: Markdown
 
 - link: /gitcommands.html
-  name: Git Basics and Commands
+  name: Git Commands
+
+- link: /create.html
+  name: Repository
