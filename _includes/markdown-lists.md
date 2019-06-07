@@ -2,22 +2,22 @@
 ### Bulleted List
 * Bananas
 * Berries
-    * Black
-    * Blue
-    * Straw
-      * Everbearing
-      * Junebearing
+  * Black
+  * Blue
+  * Straw
+    * Everbearing
+    * Junebearing
 * Cherries
 * Mangos
 
 ### Ordered List
 1. Bananas
 1. Berries
-    1. Black
-    1. Blue
-    1. Straw
-       1. Everbearing
-       1. Junebearing
+   1. Black
+   1. Blue
+   1. Straw
+      1. Everbearing
+      1. Junebearing
 1. Cherries
 1. Mangos
 
