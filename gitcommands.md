@@ -16,7 +16,7 @@ From any place in the command line, type<br />
 ```git config --list``` (will display the config that you have already set)<br />
 
 ## Remote repository
-```git remote``` (show origin: (shows the origin URL, branches and other info)<br />
+```git remote show origin``` (shows the origin URL, branches and other info)<br />
 ```git fetch``` (pulls changes from the origin-master branch)<br />
 ```git pull``` (does a git fetch followed by a git merge)<br />
 ```git push``` (pushes committed changed up to remote)<br />
@@ -49,13 +49,13 @@ Add changed file(s) to staging area:<br />
 ```git add .```<br />
 ```git add <filename>```<br />
 
-git commit -m "[As the project drags on](https://xkcd.com/1296/)"
+```git commit -m "[As the project drags on](https://xkcd.com/1296/)"```
 
 ## Undoing Mess-ups
 ```git reset``` (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
-* --soft (leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.)
-* --mixed (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
-* --hard (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
+* ```--soft``` (leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.)
+* ```--mixed``` (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
+* ```--hard``` (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
 
 
 [back](./)
