@@ -16,6 +16,7 @@ __1. Cloning an existing GitHub repository:__ <br />
        The new directory is initialized as a git repo and is connected to the remote origin <br />
 
 __1. Using your own work:__ <br />
+<<<<<<< HEAD
     1. Initialize the project directory as a Git Repository <br />
       In root of directory you want to start tracking: <br />
       `git init` <br />
@@ -25,6 +26,17 @@ __1. Using your own work:__ <br />
       `echo "/images/*" >> .gitignore` <br />
       Screw up the GitIgnore at your peril.
       
+=======
+     1. Initialize the project directory as a Git Repository <br />
+        In root of directory you want to start tracking: <br />
+        `git init` <br />
+        `echo "# MyRepoName" >> README.md` <br />
+        `touch .gitignore` (creates an empty .gitignore file in root of project directory) <br />
+        add any binary files to the .gitignore file <br />
+        `echo "/images/*" >> .gitignore` <br />
+        Screw up the GitIgnore at your peril.
+
+>>>>>>> more
     b) Commit everything to the repository
 `git add .` <br />
 Remove any binary files from the staging area and add them to .gitignore <br />
