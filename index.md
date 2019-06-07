@@ -5,6 +5,10 @@ layout: default
 
 Introductory Text here
 
+## Resources
+[YAML Linting](http://www.yamllint.com)
+
+## My Links
 [Creating a New Repository](repository.html)
 
 [All About Markdown](markdown.html)

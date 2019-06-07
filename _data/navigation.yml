@@ -12,5 +12,5 @@
 - link: /repository.html
   name: Repository
 
-  - link: /lando.html
-    name: Lando
+- link: /lando.html
+  name: Lando
