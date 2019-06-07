@@ -16,11 +16,12 @@ From any place in the command line, type<br />
 `git config --list` (will display the config that you have already set)<br />
 
 ## Remote repository
-`git remote show origin` (shows the origin URL, branches and other info)<br />
+`git branch -r` (shows remote branches)<br />
+`git remote show origin` (shows the remote repository URL, branches and other info)<br />
 `git fetch` (pulls changes from the origin-master branch)<br />
 `git pull` (does a git fetch followed by a git merge)<br />
 `git push` (pushes committed changed up to remote)<br />
-`git branch -r` (shows remote branches)<br />
+`git push --set-upstream origin {branchName}` (creates remote branch and pushes to it)
 
 ## Branches
 A new branch is created off of the current branch.<br />
@@ -51,7 +52,6 @@ Add changed file(s) to staging area:<br />
 
 `git commit -m "Explanatory Message"` <br />
 [As the project drags on](https://xkcd.com/1296/)
-
 
 ## Undoing Mess-ups
 `git reset <last good SHA>` (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
