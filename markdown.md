@@ -8,16 +8,18 @@ layout: default
 [CheatSheet and Tutorial by CommonMark](https://commonmark.org/help/)
 
 ## Headers
-Starting a line with a hash ```#``` and a space makes a header.
-
+Starting a line with a hash ```#``` and a space makes a header. <br />
+```### Header 3``` <br />
 The more ```#```, the smaller the header.
 
 ## Links
 Square brackets with link text + parenthesis with link URL. <br />
+```[My Repositories](https://github.com/cathysnider/)``` <br />
 [My Repositories](https://github.com/cathysnider/)
 
 ## Graphics
 Exclamation point + square brackets with alt text + parenthesis with image URL. <br />
+```![Pears](https://spot.colorado.edu/~sniderc/images/digitalart/pears.jpg)``` <br />
 ![Pears](https://spot.colorado.edu/~sniderc/images/digitalart/pears.jpg)
 
 ## Lists
@@ -27,12 +29,12 @@ Exclamation point + square brackets with alt text + parenthesis with image URL. 
 Wrap text with asterisks ```*``` or underscores ```_```, single for italics and double for bold.
 
 ```*``` This text will be italic ```*``` <br />
-```**``` This text will be bold ```**``` 
+```**``` This text will be bold ```**```
 
 Escape with a backslash ```\*``` or ```\_``` if you want the asterisks/underscores to be themselves.
 
 ## Tables
-Create tables with pipes | and hyphens -. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before your table in order for it to correctly render.<br />
+Create tables with pipes | and hyphens -. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render.<br />
 
  | Command | Description |
  | --- | --- |
@@ -49,7 +51,9 @@ var i;
 for (i=0; i<5; i++) {
   console.log(i);
 }
-``
+```
+
+
 
 
 [back](./)
