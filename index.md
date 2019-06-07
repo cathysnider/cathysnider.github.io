@@ -5,10 +5,10 @@ layout: default
 
 Introductory Text here
 
-[Creating a New Repository](https://cathysnider.github.io/repository.html)
+[Creating a New Repository](repository.html)
 
-[All About Markdown](https://cathysnider.github.io/markdown.html)
+[All About Markdown](markdown.html)
 
-[Git Basics and Commands](https://cathysnider.github.io/gitcommands.html)
+[Git Basics and Commands](gitcommands.html)
 
 [Working with Lando](lando.html)
