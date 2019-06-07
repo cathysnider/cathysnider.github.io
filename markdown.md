@@ -7,7 +7,7 @@ layout: default
 
 First off, in Markdown, whitespace matters, specifically spaces. If something isn't rendering properly, check that.  
 
-Github uses a flavored markdown. [Here's the spec](https://github.github.com/gfm/) <br />
+Github uses a flavored markdown. [Here's the spec](https://github.github.com/gfm/). <br />
 [CheatSheet and Tutorial by CommonMark](https://commonmark.org/help/)
 
 ## Headers
@@ -41,7 +41,7 @@ Wrap text with asterisks `*` or underscores `_`, single for italics and double f
 Escape with a backslash `\*` or `\_` if you want the asterisks/underscores to be themselves.
 
 ## Tables
-Create tables with pipes | and hyphens -. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render. See [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables)
+Create tables with pipes | and hyphens -. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render. See [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables).
 
  | Command | Description |
  | --- | --- |
