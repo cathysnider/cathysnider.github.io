@@ -3,6 +3,11 @@ title: Git Basics and Commands
 layout: default
 ---
 
+## Best Practices: Git and GitHub
+[Datree.io: Top 10 GitHub best practices for developers](https://datree.io/github-best-practices/)<br />
+[GitHub Resources: GitHub best practices](https://resources.github.com/videos/github-best-practices/)<br />
+[Pandeiro: Git Best Practices](https://gist.github.com/pandeiro/1552496)
+
 # Git Basics and Commands
 SHA: The 40 digit hash number that verifies data integrity for a commit<br />
 HEAD: A pointer; always points to tip of currently checked out branch<br />
@@ -59,10 +64,6 @@ Add changed file(s) to staging area:<br />
 * `--mixed` (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
 * `--hard` (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
 
-## Best Practices: Git and GitHub
-[Datree.io: Top 10 GitHub best practices for developers](https://datree.io/github-best-practices/)
-[GitHub Resources: GitHub best practices](https://resources.github.com/videos/github-best-practices/)
-[Pandeiro: Git Best Practices](https://gist.github.com/pandeiro/1552496)
 
 
 [back](./)
