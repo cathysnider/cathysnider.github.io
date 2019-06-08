@@ -31,18 +31,15 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
  | Dolor | 375,929 |
  ```
 
+
  | Column One | Column Two |
  | --- | ---: |
  | Lorem | 12,300 |
  | Ipsum | 5,032 |
  | Dolor | 375,929 |
 
- ---
+  ____________
 
- | Command | Description |
- | --- | --- |
- | `git status` | List all *new or modified* files |
- | `git diff` | Show file differences that **haven't been** staged |
 
 ## Code
 * Inline text gets one backtick. <br />

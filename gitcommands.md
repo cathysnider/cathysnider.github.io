@@ -50,6 +50,9 @@ Be on the receiver branch, i.e. the one into which you are merging.  You pull in
 `git log --oneline` (easier to read)<br />
 `git log --since=2015-01-01` (everything since given date)<br />
 
+### Differences
+`git diff` (show file differences that **haven't been** staged
+
 ## Staging and Committing
 Add changed file(s) to staging area:<br />
 `git add .`<br />
