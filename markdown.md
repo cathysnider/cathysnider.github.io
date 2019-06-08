@@ -31,6 +31,14 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
  | Dolor | 375,929 |
  ```
 
+ | Column One | Column Two |
+ | --- | ---: |
+ | Lorem | 12,300 |
+ | Ipsum | 5,032 |
+ | Dolor | 375,929 |
+
+ ---
+
  | Command | Description |
  | --- | --- |
  | `git status` | List all *new or modified* files |
@@ -61,7 +69,7 @@ Exclamation point + square brackets with alt text + parenthesis with image URL. 
 
 ## Blockquotes
 Use a GreaterThan `>` sign <br />
-> Last night I dreamt I went to Manderlay again.
+> Last night I dreamt I went to Manderley again.
 
 ## Lists
 {% include markdown-lists.md %}
