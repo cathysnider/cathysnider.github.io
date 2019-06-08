@@ -5,7 +5,7 @@ layout: default
 
 # All About Markdown
 
-First off, in Markdown, whitespace matters, specifically spaces. If something isn't rendering properly, check the spaces.  
+First off: in Markdown, whitespace matters, specifically spaces. If something isn't rendering properly, check the spaces.  
 
 Github uses a flavored markdown. [Here's the spec](https://github.github.com/gfm/). <br />
 [CheatSheet and Tutorial by CommonMark](https://commonmark.org/help/)
@@ -22,6 +22,14 @@ Square brackets with link text + parenthesis with link URL. <br />
 
 ## Tables
 Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render. See [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables).
+
+```
+ | Column One | Column Two |
+ | --- | ---: |
+ | Lorem | 12,300 |
+ | Ipsum | 5,032 |
+ | Dolor | 375,929 |
+ ```
 
  | Command | Description |
  | --- | --- |
