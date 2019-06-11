@@ -20,8 +20,9 @@ layout: default
    ```mv drupal-7.x mylandosite```
 
    cd into profiles folder and clone down the ExpressMono profile <br />
+   ```cd profiles``` <br />
    ```git clone https://github.com/CuBoulder/express_mono.git``` <br />
-   rename that folder to be 'express' <br />
+   Rename that folder to be 'express' <br />
    ```mv express_mono express```
 
 1. Initialize Lando in project folder
@@ -39,7 +40,7 @@ layout: default
    ```lando start```  <br />
    ```lando info```
 
-1. Install Drupal via Browser <br />
+1. Install Drupal via browser <br />
    Go to site in browser window (https://mylandosite.lndo.site); accept cert <br />
    Go through the installation process
    * database name: drupal7
@@ -55,7 +56,7 @@ layout: default
    * Pantheon
 
 1. Installing Local Users: <br />
-   local sites: install the cu_local_users bundle with drush command: <br />
+   Install the cu_local_users bundle with drush command: <br />
    ```lando drush en cu_local_users``` <br />
    Then go to site in browser; put the site in Mixed Mode (config >> LDAD >> Tab 4: Authentication) <br />
    You are now able to sign on as developer/developer <br />
