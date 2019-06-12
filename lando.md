@@ -25,11 +25,11 @@ layout: default
    Rename that folder to be 'express' <br />
    ```mv express_mono express```
 
-1. Initialize Lando in project folder
+1. Initialize Lando in project folder <br />
    go back to root of mySiteName folder <br />
    ```cd ../```
 
-  and initialize it for Lando with the following params:
+   and initialize it for Lando with the following params:
 
    ```lando init```
    * codebase: current working directory
@@ -44,9 +44,11 @@ layout: default
    ```lando info```
 
 1. Install Drupal with drush <br />
-   ```lando drush si express express_profile_configure_form.options.cu_core --account-name=admin --account-pass=admin --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+   Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql:admin_user:admin_password@db_host:db_port/database_name
 
-   Set profile configure form options to .cu_core, cu_testing_core, or cu_pantheon_core
+   ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+
+   Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core
 
    **Skip to "Installing Local Users"**
 
