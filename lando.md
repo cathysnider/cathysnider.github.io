@@ -44,7 +44,11 @@ layout: default
    ```lando info```
 
 1. Install Drupal with drush <br />
-   ```lando drush si {mySiteName} --db-url=mysql://drupal7:drupal7@database:3306/ -v -y```
+   ```lando drush si express express_profile_configure_form.options.cu_core --account-name=admin --account-pass=admin --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+
+   Set profile configure form options to .cu_core, cu_testing_core, or cu_pantheon_core
+
+   Skip to "Installing Local Users"
 
 1. Install Drupal via browser <br />
    Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
@@ -57,9 +61,9 @@ layout: default
      * database port: 3306
 
 1. Install Express Profile -- one of:
-   * Production (choose this one)
-   * Testing
-   * Pantheon
+   * Production (cu-core)
+   * Testing (cu_testing_core)
+   * Pantheon (cu_pantheon_core)
 
 1. Installing Local Users: <br />
    Install the cu_local_users bundle with drush command: <br />
