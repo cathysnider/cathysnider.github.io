@@ -58,7 +58,7 @@ layout: default
 1. Installing Local Users: <br />
    Install the cu_local_users bundle with drush command: <br />
    ```lando drush en cu_local_users``` <br />
-   Then go to site in browser; put the site in Mixed Mode (config >> LDAD >> Tab 4: Authentication) <br />
+   Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication) <br />
    You are now able to sign on as developer/developer <br />
    These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
