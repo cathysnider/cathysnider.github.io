@@ -74,5 +74,11 @@ layout: default
    You are now able to sign on as developer/developer <br />
    These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
+1. Install the bundles if desired: <br />
+   ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle```
+
+1. Install test content if desired: <br />
+   ```lando drush drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_context cu_test_content_gallery cu_test_content_people```
+
 
 [back](./)
