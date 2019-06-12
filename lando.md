@@ -16,23 +16,26 @@ layout: default
 
    Specifically, CU Boulder's Hardened Drupal 7:<br />
    ```git clone https://github.com/CuBoulder/drupal-7.x.git```<br />
-   Rename the folder to be a project folder. Like "mylandosite" <br />
-   ```mv drupal-7.x mylandosite```
+   Rename the folder to be a project folder. Like "mySiteName" <br />
+   ```mv drupal-7.x {mySiteName}```
 
    cd into profiles folder and clone down the ExpressMono profile <br />
-   ```cd profiles``` <br />
+   ```cd {mySiteName}/profiles``` <br />
    ```git clone https://github.com/CuBoulder/express_mono.git``` <br />
    Rename that folder to be 'express' <br />
    ```mv express_mono express```
 
 1. Initialize Lando in project folder
-   go back to root of mylandosite folder and initialize it for Lando with the following params:
+   go back to root of mySiteName folder <br />
+   ```cd ../```
+
+  and initialize it for Lando with the following params:
 
    ```lando init```
    * codebase: current working directory
    * recipe: drupal7
    * webroot: .
-   * what to call this app: same name as project folder {mylandosite}
+   * what to call this app: same name as project folder ({mySiteName})
 
    This creates a .lando.yml file in your project folder
 
@@ -40,8 +43,11 @@ layout: default
    ```lando start```  <br />
    ```lando info```
 
+1. Install Drupal with drush <br />
+   ```lando drush si {mySiteName} --db-url=mysql://drupal7:drupal7@database:3306/ -v -y```
+
 1. Install Drupal via browser <br />
-   Go to site in browser window (https://mylandosite.lndo.site); accept cert <br />
+   Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
    Go through the installation process
    * database name: drupal7
    * database username: drupal7
