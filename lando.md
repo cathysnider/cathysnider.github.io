@@ -48,7 +48,7 @@ layout: default
 
    Set profile configure form options to .cu_core, cu_testing_core, or cu_pantheon_core
 
-   Skip to "Installing Local Users"
+   **Skip to "Installing Local Users"**
 
 1. Install Drupal via browser <br />
    Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
