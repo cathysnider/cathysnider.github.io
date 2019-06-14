@@ -76,11 +76,11 @@ layout: default
    ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle```
 
 1. **Install test content if desired:** <br />
-   ```lando drush drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_context cu_test_content_gallery cu_test_content_people```
+   ```lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people```
 
 Lando Documentation: <br />
-* https://docs.devwithlando.io/
-* https://api.drupal.org
+* [https://docs.devwithlando.io/](https://docs.devwithlando.io/)
+* [https://api.drupal.org](https://api.drupal.org)
 
 
 [back](./)
