@@ -7,9 +7,9 @@ layout: default
 
 Sign in to Pantheon Dashboard: [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/) with your CU - Google account.
 
-**Sites Imported to Pantheon**
+**Dev Sites Imported to Pantheon**
 
-1. need addy
+1. [https://www-dev.colorado.edu/p1a2094d4553/](https://www-dev.colorado.edu/p1a2094d4553/)
 1. [https://www-dev.colorado.edu/p13d2041e3cd/](https://www-dev.colorado.edu/p13d2041e3cd/)
 1. [https://www-dev.colorado.edu/p1b61d6b1163/](https://www-dev.colorado.edu/p1b61d6b1163/)
 1. [https://www-dev.colorado.edu/p1b3dd286a7a/](https://www-dev.colorado.edu/p1b3dd286a7a/)
