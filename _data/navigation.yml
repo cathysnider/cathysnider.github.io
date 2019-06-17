@@ -15,5 +15,8 @@
 - link: /lando.html
   name: Lando
 
+- link: /behat.html
+  name: Behat
+
 - link: /pantheon.html
   name: Pantheon
