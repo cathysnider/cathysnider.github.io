@@ -14,7 +14,8 @@ To test with Behat, you'll need to enable all the bundles and install local user
 1. **Install Behat test module** <br/>
    This enables all the bundles on your local site, and it enables the local users. <br/>
    ```lando drush en cu_behat_tests -y```
-   Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication) <br />
+   Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication)
+   
    You are now able to sign on as developer/developer or any other role. <br />
    These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
