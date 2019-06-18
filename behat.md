@@ -13,16 +13,14 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
 1. **Install Behat test module** <br/>
    This enables all the bundles on your local site, and it enables the local users. <br/>
-   ```lando drush en cu_behat_tests -y```
+   ```lando drush en cu_behat_tests -y``` <br />
    Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication)
 
-   You are now able to sign on as developer/developer or any other role. <br />
-   These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
+   You are now able to sign on as developer/developer or any other role. These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
    **Skip to Update behat.local.yml**
 
 1. **Install Local Users** <br />
-   Install the cu_local_users bundle with drush command: <br />
    ```lando drush en cu_local_users``` <br />
    Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication) <br />
 
@@ -46,15 +44,15 @@ To test with Behat, you'll need to enable all the bundles and install local user
            Behat\MinkExtension:
             base_url: "https://mySiteName.lndo.site"
       ```
-      
+
 1. **Install behat dependencies** <br />
-   In behat folder (/profiles/express/tests/behat), run behat command: <br />
+   In behat folder (/profiles/express/tests/behat): <br />
   ```composer install```
 
 1. **Start Drush webserver** <br />
          ```lando drush runserver 127.0.0.1:8079```
 
-1. **Run Behat command** <br />
+1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command: <br />
    example: <br />
    ```
