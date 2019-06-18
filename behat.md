@@ -27,7 +27,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 1. **Install the bundles** <br />
    ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle```
 
-1. **Update behat.local.yml with for lando server** <br />
+1. **Update behat.local.yml with config info for lando server** <br />
    ```lando info``` to verify your local server URL (should be https://mySiteName.lndo.site)<br />
    In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
 
