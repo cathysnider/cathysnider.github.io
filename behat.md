@@ -49,12 +49,12 @@ To test with Behat, you'll need to enable all the bundles and install local user
    In behat folder (/profiles/express/tests/behat): <br />
   ```composer install```
 
-1. **Start Drush webserver** <br />
+1. **Start webserver** <br />
          ```lando drush runserver 127.0.0.1:8079```
 
 1. **Run the Behat tests** <br />
-   From behat folder (/profiles/express/tests/behat), run behat command: <br />
-   example: <br />
+   From behat folder (/profiles/express/tests/behat), run behat command.  <br />
+   Example: <br />
    ```
    ./bin/behat --config behat.local.yml --verbose --tags '~@broken&&~@javascript'
    ```
