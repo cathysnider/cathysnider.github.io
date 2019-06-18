@@ -21,7 +21,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
    **Skip to Update behat.local.yml**
 
-1. **Install Local Users:** <br />
+1. **Install Local Users** <br />
    Install the cu_local_users bundle with drush command: <br />
    ```lando drush en cu_local_users``` <br />
    Then go to site in browser; put the site in Mixed Mode (config >> LDAP >> Tab 4: Authentication) <br />
@@ -30,7 +30,8 @@ To test with Behat, you'll need to enable all the bundles and install local user
    ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle```
 
 1. **Update behat.local.yml with for lando server** <br />
-      If you have your local sites already running on a server--for example, at https://mySiteName.lndo.site)--go to the behat.local.yml file and replace:
+   ```lando info``` to verify your local server URL (should be https://mySiteName.lndo.site)<br />
+   In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
 
       ```bash
           extensions:
@@ -45,8 +46,9 @@ To test with Behat, you'll need to enable all the bundles and install local user
            Behat\MinkExtension:
             base_url: "https://mySiteName.lndo.site"
       ```
+      
 1. **Install behat dependencies** <br />
-  From behat folder (/profiles/express/tests/behat), run behat command: <br />
+   In behat folder (/profiles/express/tests/behat), run behat command: <br />
   ```composer install```
 
 1. **Start Drush webserver** <br />
