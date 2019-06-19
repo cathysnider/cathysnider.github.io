@@ -52,7 +52,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
 ## Troubleshooting
 
-If attempts at logging in are failing due to too many failed login attempts, empty the flood table.
+If you can no longer login due to too many failed login attempts, empty the flood table.
 ```
 lando mysql
 -> use drupal7;
