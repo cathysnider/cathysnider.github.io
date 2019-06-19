@@ -5,9 +5,12 @@ layout: default
 
 # Drupal 7 Express-mono install with Lando
 
-1. **Install Lando (a one-time setup)** <br />
-   Get Lando dmg from GitHub; run through package installation <br />
-   Lando config is created at ~/.lando
+## Install Lando (One Time Setup)
+
+Get Lando dmg from GitHub; run through package installation <br />
+Lando config is created at ~/.lando
+
+## Creating Web Express Project
 
 1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
    Specifically, CU Boulder's Hardened Drupal 7:<br />
@@ -44,18 +47,18 @@ layout: default
 1. **Install Drupal with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
 
-  Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
+   Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
 
-  **cu_core** <br />
-    ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+   **cu_core** <br />
+     ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
-  **cu_testing_core** <br />
-    ```lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+   **cu_testing_core** <br />
+     ```lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
-  **cu_pantheon_core** <br />
-    ```lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+   **cu_pantheon_core** <br />
+     ```lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
-   **Skip to "Installing Local Users"**
+   **Skip to "Install the bundles"**
 
 1. **Install Drupal via browser** <br />
    Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
@@ -77,6 +80,12 @@ layout: default
 
 1. **Install test content if desired:** <br />
    ```lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y```
+
+## Destroying a Lando Project
+
+```lando destroy``` <br />
+Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its content. It does not delete the project files cloned from GitHub. You can start over from Step 5: Install Drupal with drush, then enable bundles and test content.
+
 
 **Lando Documentation** <br />
 * [https://docs.devwithlando.io/](https://docs.devwithlando.io/)
