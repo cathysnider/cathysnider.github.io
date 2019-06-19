@@ -36,7 +36,9 @@ Lando config is created at ~/.lando
    * codebase: current working directory
    * recipe: drupal7
    * webroot: .
-   * what to call this app: same name as project folder ({mySiteName})
+   * what to call this app: same name as project folder (mySiteName)
+
+   ```lando init --source cwd --recipe drupal7  --webroot . --name mySiteName --full```
 
    This creates a .lando.yml file in your project folder
 
@@ -81,8 +83,14 @@ Lando config is created at ~/.lando
 1. **Install test content if desired:** <br />
    ```lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y```
 
-## Destroying a Lando Project
+## Other Lando Commands
 
+### Sharing a Local Site
+Useful for sharing work with clients or testing local site on multiple devices. You must specify the URL you want to share using the ---url flag. The URL must be in the form http://localhost:db_port. Get this from ```lando info```.
+
+```lando share --url http://localhost:12345```
+
+### Destroying a Lando Project
 ```lando destroy``` <br />
 Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its content. It does not delete the project files cloned from GitHub. You can start over from Step 5: Install Drupal with drush, then enable bundles and test content.
 
