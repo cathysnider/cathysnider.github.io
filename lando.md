@@ -5,15 +5,15 @@ layout: default
 
 # Drupal 7 Express-mono install with Lando
 
-1. **Install Lando:** <br />
+1. **Install Lando (a one-time setup)** <br />
    Get Lando dmg from GitHub; run through package installation <br />
    Lando config is created at ~/.lando
 
-1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile:** <br />
+1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
    Specifically, CU Boulder's Hardened Drupal 7:<br />
    ```git clone https://github.com/CuBoulder/drupal-7.x.git```
 
-   Rename the folder to be a project folder. Like "mySiteName" <br />
+   Rename the folder to be your project folder -- like "mySiteName" <br />
    ```mv drupal-7.x {mySiteName}```
 
    cd into profiles folder and clone down the ExpressMono profile <br />
@@ -23,7 +23,7 @@ layout: default
    Rename that folder to be 'express' <br />
    ```mv express_mono express```
 
-1. **Initialize Lando in project folder **<br />
+1. **Initialize Lando in project folder**<br />
    Go back to root of mySiteName folder <br />
    ```cd ../```
 
@@ -44,9 +44,16 @@ layout: default
 1. **Install Drupal with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
 
-   ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+  Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
 
-   Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core
+    **cu_core** <br />
+    ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+
+    **cu_testing_core** <br />
+    ```lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
+
+    **cu_pantheon_core** <br />
+    ```lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
    **Skip to "Installing Local Users"**
 
@@ -66,12 +73,12 @@ layout: default
    * Pantheon (cu_pantheon_core)
 
 1. **Install the bundles if desired:** <br />
-   ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle```
+   ```lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y```
 
 1. **Install test content if desired:** <br />
-   ```lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people```
+   ```lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y```
 
-Lando Documentation: <br />
+**Lando Documentation** <br />
 * [https://docs.devwithlando.io/](https://docs.devwithlando.io/)
 * [https://api.drupal.org](https://api.drupal.org)
 

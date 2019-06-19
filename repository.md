@@ -22,7 +22,7 @@ Two ways: by cloning someone else's work or using your own.
       `touch .gitignore` (create empty .gitignore file in root of project directory) <br />
       Add any binary files to the .gitignore file <br />
       `echo "/images/*" >> .gitignore` <br />
-      Several .gitignore recipes are available for Drupal 7: [CU-Boulder](https://github.com/CuBoulder/drupal-7.x/blob/7.x/.gitignore) or [jbudziak's](https://gist.github.com/jbudziak/4216850) for example.
+      Several .gitignore recipes are available for Drupal 7: [CU-Boulder's](https://github.com/CuBoulder/drupal-7.x/blob/7.x/.gitignore) or [jbudziak's](https://gist.github.com/jbudziak/4216850) for example. <br />
       Screw up the GitIgnore at your peril.
    1. Commit everything to the repository <br />
       `git add .` <br />
