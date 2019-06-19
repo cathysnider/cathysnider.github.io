@@ -46,13 +46,13 @@ layout: default
 
   Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
 
-    **cu_core** <br />
+  **cu_core** <br />
     ```lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
-    **cu_testing_core** <br />
+  **cu_testing_core** <br />
     ```lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
-    **cu_pantheon_core** <br />
+  **cu_pantheon_core** <br />
     ```lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y```
 
    **Skip to "Installing Local Users"**
