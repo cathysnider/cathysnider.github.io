@@ -26,7 +26,8 @@ Two ways: by cloning someone else's work or using your own.
       Screw up the GitIgnore at your peril.
    1. Commit everything to the repository <br />
       `git add .` <br />
-      Remove any binary files from the staging area and add them to .gitignore <br />
+      Review the list. Remove any binary files from the staging area and add them to .gitignore <br />
+      `git reset HEAD {filename}` (removes the one) or `git reset HEAD .` (just start over) <br />
       `git commit -m 'initiating repository` <br />
    1. Connect new local repo to a remote repo on GitHub <br />
       The repository must exist on GitHub <br />
