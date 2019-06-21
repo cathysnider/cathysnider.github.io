@@ -5,11 +5,6 @@ layout: default
 
 # Drupal 7 Express-mono install with Lando
 
-## Install Lando (One Time Setup)
-
-Get Lando dmg from GitHub; run through package installation <br />
-Lando config is created at ~/.lando
-
 ## Creating Web Express Project
 
 1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
@@ -77,6 +72,12 @@ Lando config is created at ~/.lando
 1. **Install test content if desired:** <br />
    `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
+## Lando Problems
+
+1. **Cannot fully test WebForm** <br />
+   Emails cannot be sent through Lando; nor does the recaptcha work: "ERROR for site owner:
+Invalid domain for site key"
+
 ## Other Lando Commands
 
 ### Sharing a Local Site
@@ -90,6 +91,10 @@ Sadly, this does not work with our configuration at this time
 `lando destroy` <br />
 Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its content. It does not delete the project files cloned from GitHub. You can start over from Step 3: Start Lando; then enable bundles, local users and test content.
 
+## Installing Lando (One Time Setup)
+
+Get Lando dmg from GitHub; run through package installation <br />
+Lando config is created at ~/.lando
 
 **Lando Documentation** <br />
 * [https://docs.devwithlando.io/](https://docs.devwithlando.io/)
