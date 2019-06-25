@@ -54,7 +54,7 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
 * Inline text gets one backtick.
   Solve for x: `2x + 7 = 17`
 * Blocks of code get three and can include a language code for syntax highlighting
-
+  
   ```js
   var i;
   for (i=0; i<5; i++) {
@@ -66,8 +66,8 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
 
 Wrap text with asterisks `*` or underscores `_`, single for italics and double for bold.
 
-`*` This text will be italic `*` <br />
-`**` This text will be bold `**`
+* `*` This text will be italic `*`
+* `**` This text will be bold `**`
 
 Escape with a backslash `\*` or `\_` if you want the asterisks/underscores to be themselves.
 
