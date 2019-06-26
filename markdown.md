@@ -14,7 +14,7 @@ Github uses a flavored markdown. [Here's the spec](https://github.github.com/gfm
 
 Starting a line with a hash `#` and a `space` makes a header.
 
-```md
+```
 ### Header 3
 ```
 
@@ -24,7 +24,7 @@ The more `#`, the smaller the header.
 
 Square brackets with link text + parenthesis with link URL.
 
-```md
+```
 [My Repositories](https://github.com/cathysnider/)
 ```
 
@@ -34,13 +34,13 @@ Square brackets with link text + parenthesis with link URL.
 
 Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render. See [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables).
 
-```md
+```
  | Column One | Column Two |
  | --- | ---: |
  | Lorem | 12,300 |
  | Ipsum | 5,032 |
  | Dolor | 375,929 |
- ```
+```
 
  | Column One | Column Two |
  | --- | ---: |
@@ -54,7 +54,7 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
 * Inline text gets one backtick.
   Solve for x: `2x + 7 = 17`
 * Blocks of code get three and can include a language code for syntax highlighting
-  
+
   ```js
   var i;
   for (i=0; i<5; i++) {
