@@ -57,11 +57,11 @@ Be on the receiver branch, i.e. the one into which you are merging.  You pull in
 
 ### Branch Stats
 ```sh
-git status reports the difference between the working directory, the staging index and the repository<br />
-git log (shows all commits with SHAs and commit message, latest to earliest)<br />
-git log -n 3 (show me the last three commits)<br />
-git log --oneline (easier to read)<br />
-git log --since=2015-01-01 (everything since given date)<br />
+git status # (reports the difference between the working directory, the staging index and the repository)
+git log # (shows all commits with SHAs and commit message, latest to earliest)
+git log -n 3 # (show me the last three commits)
+git log --oneline # (easier to read)
+git log --since=2015-01-01 # (everything since given date)
 ```
 
 ### Differences
@@ -78,9 +78,9 @@ Add changed file(s) to staging area:<br />
 ## Undoing Mess-ups
 ```sh
 git reset <last good SHA> # (specifies where the head pointer should point. Very powerful and can undo a bunch of work that maybe you didn't mean to.)
-* --soft #(leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.)
-* --mixed #(default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
-* --hard #(destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
+* --soft # (leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.)
+* --mixed # (default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.)
+* --hard # (destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.)
 ```
 
 

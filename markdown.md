@@ -47,7 +47,7 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
  | Lorem | 12,300 |
  | Ipsum | 5,032 |
  | Dolor | 375,929 |
-  ____________
+
 
 ## Code
 
