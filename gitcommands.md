@@ -4,23 +4,30 @@ layout: default
 ---
 
 ## Best Practices: Git and GitHub
-[Datree.io: Top 10 GitHub best practices for developers](https://datree.io/github-best-practices/)<br />
-[GitHub Resources: GitHub best practices](https://resources.github.com/videos/github-best-practices/)<br />
-[Pandeiro: Git Best Practices](https://gist.github.com/pandeiro/1552496)
+
+* [Datree.io: Top 10 GitHub best practices for developers](https://datree.io/github-best-practices/)
+* [GitHub Resources: GitHub best practices](https://resources.github.com/videos/github-best-practices/)
+* [Pandeiro: Git Best Practices](https://gist.github.com/pandeiro/1552496)
 
 # Git Basics and Commands
-SHA: The 40 digit hash number that verifies data integrity for a commit<br />
-HEAD: A pointer; always points to tip of currently checked out branch<br />
-Git commands are prefaced with the word ‘git’: git add, git delete, git diff, etc.
+
+* SHA: The 40 digit hash number that verifies data integrity for a commit<br />
+* HEAD: A pointer; always points to tip of currently checked out branch<br />
+* Git commands are prefaced with the word `git`: `git add`, `git delete`, `git diff`, etc.
 
 ## Global Configurations
-From any place in the command line, type<br />
-`git config --global user.name “daisytrench”`<br />
-`git config --global user.email ‘catherine.snider@colorado.edu’`<br />
-`git config --global color.ui true`(color the user interface)<br />
-`git config --list` (will display the config that you have already set)<br />
+
+From any place in the command line, type
+
+```sh
+git config --global user.name "daisytrench"
+git config --global user.email "catherine.snider@colorado.edu"
+git config --global color.ui tru # (color the user interface)
+git config --list # (will display the config that you have already set)
+```
 
 ## Remote repository
+
 `git branch -r` (shows remote branches)<br />
 `git remote show origin` (shows the remote repository URL, branches and other info)<br />
 `git fetch` (pulls changes from the origin-master branch)<br />
@@ -29,6 +36,7 @@ From any place in the command line, type<br />
 `git push --set-upstream origin {branchName}` (creates remote branch and pushes to it)
 
 ## Branches
+
 A new branch is created off of the current branch.<br />
 `git branch` (shows branches; highlights the currently checked out branch)<br />
 `git checkout <branchname>` (switches HEAD to an existing branch)<br />
