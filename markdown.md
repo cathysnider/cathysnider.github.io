@@ -42,6 +42,7 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
  | Dolor | 375,929 |
 ```
 
+
  | Column One | Column Two |
  | --- | ---: |
  | Lorem | 12,300 |
@@ -84,6 +85,10 @@ Exclamation point + square brackets with alt text + parenthesis with image URL.
 ## Blockquotes
 
 Use a GreaterThan `>` sign
+
+```
+> Last night I dreamt I went to Manderley again.
+```
 
 > Last night I dreamt I went to Manderley again.
 

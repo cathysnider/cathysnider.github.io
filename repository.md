@@ -9,13 +9,13 @@ layout: default
 
 Two ways: by cloning someone else's work or using your own.
 
-1. Cloning an existing GitHub repository: <br />
+1. **Cloning an existing GitHub repository:** <br />
    * Get the clone URL from GitHub <br />
    * From command line, in parent directory: <br />
      `git clone {repositoryURL}` <br />
      The new directory is automatically initialized as a git repo and is connected to the remote origin <br />
-1. Using your own work: <br />
-   1. Initialize the project directory as a Git Repository <br />
+1. **Using your own work:** <br />
+   1. **Initialize the project directory as a Git Repository** <br />
       In root of directory you want to start tracking: <br />
       `git init` <br />
       `echo "# MyRepoName" >> README.md` <br />
@@ -24,12 +24,13 @@ Two ways: by cloning someone else's work or using your own.
       `echo "/images/*" >> .gitignore` <br />
       Several .gitignore recipes are available for Drupal 7: [CU-Boulder's](https://github.com/CuBoulder/drupal-7.x/blob/7.x/.gitignore) or [jbudziak's](https://gist.github.com/jbudziak/4216850) for example. <br />
       Screw up the GitIgnore at your peril.
-   1. Commit everything to the repository <br />
+   1. **Add files to staging area** <br />
       `git add .` <br />
       Review the list. Remove any binary files from the staging area and add them to .gitignore <br />
-      `git reset HEAD {filename}` (removes the one) or `git reset HEAD .` (just start over) <br />
-      `git commit -m 'initiating repository` <br />
-   1. Connect new local repo to a remote repo on GitHub <br />
+      `git reset HEAD {filename}` (removes the one) or `git reset HEAD .` (just start over)
+   1. **Commit everything to the respository**
+      `git commit -m 'initiating repository`
+   1. **Connect new local repo to a remote repo on GitHub** <br />
       The repository must exist on GitHub <br />
       Go to GitHub and create the repository; copy its URL <br />
       `git remote add origin {repositoryURL}` <br />
