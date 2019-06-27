@@ -51,5 +51,38 @@ $multiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 
 print $multiArray['Hermonie']['size']; # selecting an item
 ```
 
+## Objects
+
+**Simple.**
+```sh
+$myObject = new stdClass; # insantiate top level object
+
+$myObject->Fruit = 'mango';
+$myObject->Flag = FALSE;
+$myObject->born = 2001;
+print $myObject->Fruit; # selecting an item
+```
+
+**Multidimensional.**
+```sh
+$multiObject = new stdClass;
+$multiObject->Harry = new stdClass; # instantiate first sub object
+$multiObject->Harry->year = 1972;
+$multiObject->Harry->band = 'The Cure';
+$multiObject->Harry->size = 10;
+
+$multiObject->Ron = new stdClass; # instantiate second sub object
+$multiObject->Ron->year = 1975;
+$multiObject->Ron->band = 'Coldplay';
+$multiObject->Ron->size = 8;
+
+$multiObject->Hermione = new stdClass; #instantiate third sub object
+$multiObject->Hermione->year = 1969;
+$multiObject->Hermione->band = 'Beach Boys';
+$multiObject->Hermione->size = 10;
+
+
+print $multiObject->Ron->band; # selecting an item
+```
 
 [back](./)
