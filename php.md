@@ -8,32 +8,31 @@ layout: default
 ## Some String Functions
 ```sh
 $myString = 'Lorem ipsum dolor sit amet'
-strstr($myString, 'greeking'); # Returns FALSE if the string does not exists. <br />
-nl2br($myString); # Convert new lines to tags. <br />
-trim($myString); # Remove white space (spaces, new lines and tabs) from the beginning and end. <br />
-strlen($myString); # Return the length of the string.<br />
-str_replace('example', 'party', $myString); # Replace one part of the string with another.<br />
-strip_tags($myString); # Remove HTML from the string.<br />
-strtoupper($myString); # Convert all the characters to uppercase.<br />
-ucwords($myString); # Capitalize each word. <br />
+strstr($myString, 'greeking'); # Returns FALSE if the string does not exists.
+nl2br($myString); # Convert new lines to tags.
+trim($myString); # Remove white space (spaces, new lines and tabs) from the beginning and end.
+strlen($myString); # Return the length of the string.
+str_replace('example', 'party', $myString); # Replace one part of the string with another.
+strip_tags($myString); # Remove HTML from the string.
+strtoupper($myString); # Convert all the characters to uppercase.
+ucwords($myString); # Capitalize each word.
 date('F j, Y'); # Return the date.
 
 ```
 
-
-See [PHP Manual](http://php.net/manual/en/ref.strings.php) for all string functions.
+[PHP Manual: Strings](http://php.net/manual/en/ref.strings.php)
 
 ## Arrays
 
 Pass values into $variable with array() function.
 
-Simple.
+**Simple.**
 ```sh
 $simpleArray = array('First', 'Second', 'Third');
 $simpleArray[] = 'Fourth'; # adds item to end
 print $simpleArray[0]; # selecting an item
 ```
-Associative. Set key/value pairs.
+**Associative.** Set key/value pairs.
 ```sh
 $assocArray = array('fruit' => 'mango', 'flag' => FALSE, 'born' => 2001,);
 $assocArray['name'] = 'Daffodil'; # adds item to end
@@ -41,7 +40,7 @@ print $assocArray['fruit']; # selecting an item
 print $assocArray[0]; # returns error
 ```
 
-Multidimensional. A nested array.
+**Multidimensional.** A nested array.
 ```sh
 $multiArray = array(
   'Harry' => array('birthyear' => 1972, 'fav_band' => 'The Cure','shoe_size' => 10,),
