@@ -9,6 +9,9 @@
 - link: /gitcommands.html
   name: Git Commands
 
+  - link: /php.html
+    name: PHP
+
 - link: /repository.html
   name: Repository
 
