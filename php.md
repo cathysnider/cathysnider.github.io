@@ -20,7 +20,7 @@ date('F j, Y'); # Return the date.
 
 ```
 
-[PHP Manual: Strings](http://php.net/manual/en/ref.strings.php)
+[PHP Manual: Strings](https://www.php.net/manual/en/language.types.string.php)
 
 ## Arrays
 
@@ -50,12 +50,13 @@ $multiArray = array(
 $multiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
 print $multiArray['Hermonie']['size']; # selecting an item
 ```
+[PHP Manual: Arrays](https://www.php.net/manual/en/language.types.array.php)
 
 ## Objects
 
 **Simple.**
 ```sh
-$myObject = new stdClass; # insantiate top level object
+$myObject = new stdClass; # instantiate top level object
 
 $myObject->Fruit = 'mango';
 $myObject->Flag = FALSE;
@@ -81,8 +82,8 @@ $multiObject->Hermione->year = 1969;
 $multiObject->Hermione->band = 'Beach Boys';
 $multiObject->Hermione->size = 10;
 
-
 print $multiObject->Ron->band; # selecting an item
 ```
 
+[PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php)
 [back](./)
