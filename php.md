@@ -43,12 +43,12 @@ print $assocArray[0]; # returns error
 **Multidimensional.** A nested array.
 ```sh
 $multiArray = array(
-  'Harry' => array('birthyear' => 1972, 'fav_band' => 'The Cure','shoe_size' => 10,),
-  'Ron' => array('birthyear' => 1975,'fav_band' => 'Coldplay','shoe_size' => 8,),
-  'Hermione' => array('birthyear' => 1969, 'fav_band' => 'Beach Boys', 'shoe_size' => 10,),
+  'Harry' => array('year' => 1972, 'band' => 'The Cure','size' => 10,),
+  'Ron' => array('year' => 1975,'band' => 'Coldplay','size' => 8,),
+  'Hermione' => array('year' => 1969, 'band' => 'Beach Boys', 'size' => 10,),
 );
-$multiArray['Neville'] = array('birthyear' => 1984,'fav_band' => 'The Beatles','shoe_size' => 9,); # adds item to end
-print $multiArray['Hermonie']['shoe_size']; # selecting an item
+$multiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
+print $multiArray['Hermonie']['size']; # selecting an item
 ```
 
 
