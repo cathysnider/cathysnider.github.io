@@ -29,11 +29,11 @@ git config --list # will display the config that you have already set
 ## Remote repository
 
 ```sh
-git branch -r # shows remote branches<br />
-git remote show origin # shows the remote repository URL, branches and other info<br />
-git fetch # pulls changes from the origin-master branch<br />
-git pull # does a git fetch followed by a git merge<br />
-git push # pushes committed changed up to remote<br />
+git branch -r # shows remote branches
+git remote show origin # shows the remote repository URL, branches and other info
+git fetch # pulls changes from the origin-master branch
+git pull # does a git fetch followed by a git merge
+git push # pushes committed changed up to remote
 git push --set-upstream origin {branchName} # creates remote branch and pushes to it
 ```
 
@@ -41,14 +41,14 @@ git push --set-upstream origin {branchName} # creates remote branch and pushes t
 
 A new branch is created off of the current branch.<br />
 ```sh
-git branch # shows branches; highlights the currently checked out branch<br />
-git checkout <branchname> # switches HEAD to an existing branch<br />
-git checkout -b <branchname> # creates a new branch and switches HEAD to it at the same time<br />
-git branch -a # shows local and remote branches<br />
-git branch -d branchNameHere # deletes named branch if it's been merged<br />
-git branch -D branchNameHere # deletes named branch even if not merged<br />
-git branch --merged # shows the branches that have been merged<br />
-git branch --no-merge # shows branches that haven't been merged<br />
+git branch # shows branches; highlights the currently checked out branch
+git checkout <branchname> # switches HEAD to an existing branch
+git checkout -b <branchname> # creates a new branch and switches HEAD to it at the same time
+git branch -a # shows local and remote branches
+git branch -d branchNameHere # deletes named branch if it's been merged
+git branch -D branchNameHere # deletes named branch even if not merged
+git branch --merged # shows the branches that have been merged
+git branch --no-merge # shows branches that haven't been merged
 ```
 
 ### Merging Branches
