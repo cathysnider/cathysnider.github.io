@@ -9,10 +9,10 @@ layout: default
 ```sh
 $myString = 'Lorem ipsum dolor sit amet'
 strstr($myString, 'greeking'); # Returns FALSE if the string does not exists.
-nl2br($myString); # Convert new lines to tags.
+nl2br($myString); # Convert new lines (both n and r) to HTML break tags.
 trim($myString); # Remove white space (spaces, new lines and tabs) from the beginning and end.
 strlen($myString); # Return the length of the string.
-str_replace('example', 'party', $myString); # Replace one part of the string with another.
+str_replace('party', 'fiesta', $myString); # Replace one part of the string with another.
 strip_tags($myString); # Remove HTML from the string.
 strtoupper($myString); # Convert all the characters to uppercase.
 ucwords($myString); # Capitalize each word.
@@ -28,27 +28,27 @@ Pass values into $variable with array() function.
 
 **Simple.**
 ```sh
-$simpleArray = array('First', 'Second', 'Third');
-$simpleArray[] = 'Fourth'; # adds item to end
-print $simpleArray[0]; # selecting an item
+$mySimpleArray = array('First', 'Second', 'Third');
+$mySimpleArray[] = 'Fourth'; # adds item to end
+print $mySimpleArray[0]; # selecting an item
 ```
 **Associative.** Set key/value pairs.
 ```sh
-$assocArray = array('fruit' => 'mango', 'flag' => FALSE, 'born' => 2001,);
-$assocArray['name'] = 'Daffodil'; # adds item to end
-print $assocArray['fruit']; # selecting an item
-print $assocArray[0]; # returns error
+$myAssocArray = array('fruit' => 'mango', 'flag' => FALSE, 'born' => 2001,);
+$myAssocArray['name'] = 'Daffodil'; # adds item to array
+print $myAssocArray['fruit']; # selecting an item
+print $myAssocArray[0]; # returns error
 ```
 
 **Multidimensional.** A nested array.
 ```sh
-$multiArray = array(
+$myMultiArray = array(
   'Harry' => array('year' => 1972, 'band' => 'The Cure','size' => 10,),
   'Ron' => array('year' => 1975,'band' => 'Coldplay','size' => 8,),
   'Hermione' => array('year' => 1969, 'band' => 'Beach Boys', 'size' => 10,),
 );
-$multiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
-print $multiArray['Hermonie']['size']; # selecting an item
+$myMultiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
+print $myMultiArray['Hermonie']['size']; # selecting an item
 ```
 [PHP Manual: Arrays](https://www.php.net/manual/en/language.types.array.php)
 
@@ -56,7 +56,7 @@ print $multiArray['Hermonie']['size']; # selecting an item
 
 **Simple.**
 ```sh
-$myObject = new stdClass; # instantiate top level object
+$myObject = new stdClass; # instantiate object
 
 $myObject->Fruit = 'mango';
 $myObject->Flag = FALSE;
@@ -66,23 +66,23 @@ print $myObject->Fruit; # selecting an item
 
 **Multidimensional.**
 ```sh
-$multiObject = new stdClass;
-$multiObject->Harry = new stdClass; # instantiate first sub object
-$multiObject->Harry->year = 1972;
-$multiObject->Harry->band = 'The Cure';
-$multiObject->Harry->size = 10;
+$myMultiObject = new stdClass; # instantiate top level object
+$myMultiObject->Harry = new stdClass; # instantiate first sub object
+$myMultiObject->Harry->year = 1972;
+$myMultiObject->Harry->band = 'The Cure';
+$myMultiObject->Harry->size = 10;
 
-$multiObject->Ron = new stdClass; # instantiate second sub object
-$multiObject->Ron->year = 1975;
-$multiObject->Ron->band = 'Coldplay';
-$multiObject->Ron->size = 8;
+$myMultiObject->Ron = new stdClass; # instantiate second sub object
+$myMultiObject->Ron->year = 1975;
+$myMultiObject->Ron->band = 'Coldplay';
+$myMultiObject->Ron->size = 8;
 
-$multiObject->Hermione = new stdClass; #instantiate third sub object
-$multiObject->Hermione->year = 1969;
-$multiObject->Hermione->band = 'Beach Boys';
-$multiObject->Hermione->size = 10;
+$myMultiObject->Hermione = new stdClass; #instantiate third sub object
+$myMultiObject->Hermione->year = 1969;
+$myMultiObject->Hermione->band = 'Beach Boys';
+$myMultiObject->Hermione->size = 10;
 
-print $multiObject->Ron->band; # selecting an item
+print $myMultiObject->Ron->band; # selecting an item
 ```
 
 [PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php)
