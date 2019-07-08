@@ -85,5 +85,41 @@ $myMultiObject->Hermione->size = 10;
 print $myMultiObject->Ron->band; # selecting an item
 ```
 
+## Looping
+
+**foreach**
+
+Simple Arrays `$mySimpleArray = array('First', 'Second', 'Third');`
+```sh
+foreach($mySimpleArray as $variableName) {
+  // do something with $variableName;
+}
+```
+Multidimensional Arrays
+```sh
+foreach($myMultiArray as $personArrayName => $arrayDetails){
+  // do something with the $details[''];
+  echo $personArrayName      # returns Harry;
+  echo $arrayDetails['year']; # returns 1972;
+  echo $arrayDetails['band']; # returns The Cure;
+  echo $arrayDetails['size']; # returns 10;
+}
+```
+
+**while and for**
+```sh
+$i = 1; #initialize counter outside of loop
+while ($i <= 5){
+echo '<h' . $i . '>This is heading ' . $i . '</h'. $i .'>';
+$i++;
+}
+
+for ($i = 1; $i <= 5; $i++) {
+  echo '<h' . $i . '>This is heading ' . $i . '</h'. $i .'>';
+}
+
+```
+
+
 [PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php)
 [back](./)
