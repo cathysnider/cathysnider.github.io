@@ -95,6 +95,7 @@ foreach($mySimpleArray as $variableName) {
   // do something with $variableName;
 }
 ```
+
 Multidimensional Arrays
 ```sh
 foreach($myMultiArray as $personArrayName => $arrayDetails){
@@ -107,19 +108,30 @@ foreach($myMultiArray as $personArrayName => $arrayDetails){
 ```
 
 **while and for**
-```sh
+
+```js
 $i = 1; #initialize counter outside of loop
 while ($i <= 5){
-echo '<h' . $i . '>This is heading ' . $i . '</h'. $i .'>';
+  echo '<h' . $i . '>This is heading ' . $i . '</h' . $i . '>';
 $i++;
 }
 
 for ($i = 1; $i <= 5; $i++) {
-  echo '<h' . $i . '>This is heading ' . $i . '</h'. $i .'>';
+  echo '<h' . $i . '>This is heading ' . $i . '</h' . $i . '>';
 }
+```
 
+## Parsing Data into Array
+
+1. pull the data into an output buffer so you can work with it (if you don't use buffer, the data will display on the page)
+```js
+ob_start(); # start the output buffer;
+include('data.txt'); # pull data file into it;
+$inputData = ob_get_contents(); # put the contents of the buffer into a variable;
+ob_end_clean(); # close output buffer;
 ```
 
 
-[PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php)
+[PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php) <br />
+
 [back](./)
