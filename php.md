@@ -99,8 +99,8 @@ foreach($mySimpleArray as $variableName) {
 Multidimensional Arrays
 ```sh
 foreach($myMultiArray as $personArrayName => $arrayDetails){
-  // do something with the $details[''];
-  echo $personArrayName      # returns Harry;
+  // do something with the $arrayDetails[''];
+  echo $personArrayName;      # returns Harry;
   echo $arrayDetails['year']; # returns 1972;
   echo $arrayDetails['band']; # returns The Cure;
   echo $arrayDetails['size']; # returns 10;
@@ -121,16 +121,19 @@ for ($i = 1; $i <= 5; $i++) {
 }
 ```
 
-## Parsing Data into Array
+## Parsing a String into an Array
 
-1. pull the data into an output buffer so you can work with it (if you don't use buffer, the data will display on the page)
+1. Pull the data into an output buffer so you can work with it (if you don't use buffer, the data will display on the page)
 ```js
 ob_start(); # start the output buffer;
 include('data.txt'); # pull data file into it;
 $inputData = ob_get_contents(); # put the contents of the buffer into a variable;
 ob_end_clean(); # close output buffer;
 ```
-
+1. The data is a huge string. 'Explode()' turns a string into an array, splitting the string on the specified character(s).
+```js
+$inputArray = explode("/n", $inputData);
+```
 
 [PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php) <br />
 
