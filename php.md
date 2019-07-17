@@ -139,7 +139,7 @@ $inputArray = explode("/n", $inputData);
 **Variable References**
 That little `&` there is a pointer back to the original variable.
 ```php
-$originalVar = 'String One';
+$originalVar = 'String One ';
 function functionWithReference(&$inputVar) {
     $inputVar = 'String Two';
     }
@@ -147,7 +147,7 @@ echo $originalVar;
 functionWithReference($originalVar);
 echo $originalVar;
 ```
-will return ` 'String One' 'String Two' `
+will return `String One String Two `
 
 
 
