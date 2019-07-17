@@ -6,7 +6,7 @@ layout: default
 # PHP Basics
 
 ## Some String Functions
-```sh
+```php
 $myString = 'Lorem ipsum dolor sit amet'
 strstr($myString, 'greeking'); # Returns FALSE if the string does not exists.
 nl2br($myString); # Convert new lines (both n and r) to HTML break tags.
@@ -27,13 +27,13 @@ date('F j, Y'); # Return the date.
 Pass values into $variable with array() function.
 
 **Simple.**
-```sh
+```php
 $mySimpleArray = array('First', 'Second', 'Third');
 $mySimpleArray[] = 'Fourth'; # adds item to end
 print $mySimpleArray[0]; # selecting an item
 ```
 **Associative.** Set key/value pairs.
-```sh
+```php
 $myAssocArray = array('fruit' => 'mango', 'flag' => FALSE, 'born' => 2001,);
 $myAssocArray['name'] = 'Daffodil'; # adds item to array
 print $myAssocArray['fruit']; # selecting an item
@@ -41,7 +41,7 @@ print $myAssocArray[0]; # returns error
 ```
 
 **Multidimensional.** A nested array.
-```sh
+```php
 $myMultiArray = array(
   'Harry' => array('year' => 1972, 'band' => 'The Cure','size' => 10,),
   'Ron' => array('year' => 1975,'band' => 'Coldplay','size' => 8,),
@@ -55,7 +55,7 @@ print $myMultiArray['Hermonie']['size']; # selecting an item
 ## Objects
 
 **Simple.**
-```sh
+```php
 $myObject = new stdClass; # instantiate object
 
 $myObject->Fruit = 'mango';
@@ -65,7 +65,7 @@ print $myObject->Fruit; # selecting an item
 ```
 
 **Multidimensional.**
-```sh
+```php
 $myMultiObject = new stdClass; # instantiate top level object
 $myMultiObject->Harry = new stdClass; # instantiate first sub object
 $myMultiObject->Harry->year = 1972;
@@ -90,14 +90,14 @@ print $myMultiObject->Ron->band; # selecting an item
 **foreach**
 
 Simple Arrays `$mySimpleArray = array('First', 'Second', 'Third');`
-```sh
+```php
 foreach($mySimpleArray as $variableName) {
   // do something with $variableName;
 }
 ```
 
 Multidimensional Arrays
-```sh
+```php
 foreach($myMultiArray as $personArrayName => $arrayDetails){
   // do something with the $arrayDetails[''];
   echo $personArrayName;      # returns Harry;
@@ -109,7 +109,7 @@ foreach($myMultiArray as $personArrayName => $arrayDetails){
 
 **while and for**
 
-```js
+```php
 $i = 1; #initialize counter outside of loop
 while ($i <= 5){
   echo '<h' . $i . '>This is heading ' . $i . '</h' . $i . '>';
@@ -124,16 +124,34 @@ for ($i = 1; $i <= 5; $i++) {
 ## Parsing a String into an Array
 
 1. Pull the data into an output buffer so you can work with it (if you don't use buffer, the data will display on the page)
-```js
+```php
 ob_start(); # start the output buffer;
 include('data.txt'); # pull data file into it;
 $inputData = ob_get_contents(); # put the contents of the buffer into a variable;
 ob_end_clean(); # close output buffer;
 ```
 1. The data is a huge string. 'Explode()' turns a string into an array, splitting the string on the specified character(s).
-```js
+```php
 $inputArray = explode("/n", $inputData);
 ```
+## Functions
+
+**Variable References**
+That little `&` there is a pointer back to the original variable.
+```php
+$originalVar = 'String One';
+function functionWithReference(&$inputVar) {
+    $inputVar = 'String Two';
+    }
+echo $originalVar;
+functionWithReference($originalVar);
+echo $originalVar;
+```
+will return ``` 'String One' 'String Two' ```
+
+
+
+
 
 [PHP Manual: Objects](https://www.php.net/manual/en/language.types.object.php) <br />
 
