@@ -147,7 +147,7 @@ echo $originalVar;
 functionWithReference($originalVar);
 echo $originalVar;
 ```
-will return ``` 'String One' 'String Two' ```
+will return ` 'String One' 'String Two' `
 
 
 

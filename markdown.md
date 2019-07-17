@@ -54,7 +54,20 @@ Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens
 
 * Inline text gets one backtick.
   Solve for x: `2x + 7 = 17`
-* Blocks of code get three and can include a language code for syntax highlighting
+* Blocks of code get three and can include a [language code for syntax highlighting](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
+
+ | Abbreviation | Code Type |
+ | --- | ---|
+ | js | javascript |
+ | php | PHP |
+ | sh | bash |
+ | feature | cucumber |
+ | console | sh-session |
+ | css | css |
+ | html | html |
+ | sql | sql |
+ | txt | txt |
+ | yml | yaml |
 
   ```js
   var i;
@@ -76,7 +89,7 @@ Escape with a backslash `\*` or `\_` if you want the asterisks/underscores to be
 
 Exclamation point + square brackets with alt text + parenthesis with image URL.
 
-```md
+```
 ![Pears](https://spot.colorado.edu/~sniderc/images/digitalart/pears.jpg)
 ```
 

@@ -22,7 +22,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
    `lando info` to verify your local server URL (should be https://mySiteName.lndo.site)<br />
    In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
 
-      ```
+      ```yml
       bash
           extensions:
            Behat\MinkExtension:
@@ -31,7 +31,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
       With your localhost site address:
 
-      ```
+      ```yml 
       bash
           extensions:
            Behat\MinkExtension:
@@ -53,7 +53,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 ## Troubleshooting
 
 If you can no longer login due to too many failed login attempts, empty the flood table.
-```
+```sh-session
 lando mysql
 -> use drupal7;
 -> delete from flood;
