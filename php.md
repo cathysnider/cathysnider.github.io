@@ -24,6 +24,8 @@ date('F j, Y'); # Return the date.
 
 ## Arrays
 
+[See arrays at work](https://github.com/cathysnider/gitBasics/blob/master/arrayWork.php)
+
 Pass values into $variable with array() function.
 
 **Simple.**
@@ -54,9 +56,11 @@ print $myMultiArray['Hermonie']['size']; # selecting an item
 
 ## Some Array Functions
 ```php
-array_rand() # returns randomly chosen key
 array_flip() # flips keys and values so one becomes the other
+array_rand() # returns randomly chosen key
 ```
+Apparently you can't access randomly chosen values; you gotta flip the array and then rand it. `$choice = array_rand(array_flip($mySimpleArray));`
+
 
 [PHP Manual: Arrays](https://www.php.net/manual/en/language.types.array.php)
 
