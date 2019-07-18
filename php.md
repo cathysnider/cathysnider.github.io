@@ -43,13 +43,21 @@ print $myAssocArray[0]; # returns error
 **Multidimensional.** A nested array.
 ```php
 $myMultiArray = array(
-  'Harry' => array('year' => 1972, 'band' => 'The Cure','size' => 10,),
-  'Ron' => array('year' => 1975,'band' => 'Coldplay','size' => 8,),
-  'Hermione' => array('year' => 1969, 'band' => 'Beach Boys', 'size' => 10,),
+    'Harry' => array('Blood Status' => 'half-blood', 'Wand' => '11", holly, phoenix feather','Born' => 'Godric\'s Hollow, England',),
+    'Ron' => array('Blood Status' => 'pure-blood','Wand' => '12", Ash, unicorn tail hair','Born' => 'Ottery St Catchpole, Devon, England,',),
+    'Hermione' => array('Blood Status' => 'muggle', 'Wand' => '10 3/4", vine wood, dragon heartstring', 'Born' => 'England',)
 );
+
 $myMultiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
 print $myMultiArray['Hermonie']['size']; # selecting an item
 ```
+
+## Some Array Functions
+```php
+array_rand() # returns randomly chosen key
+array_flip() # flips keys and values so one becomes the other
+```
+
 [PHP Manual: Arrays](https://www.php.net/manual/en/language.types.array.php)
 
 ## Objects
@@ -68,19 +76,19 @@ print $myObject->Fruit; # selecting an item
 ```php
 $myMultiObject = new stdClass; # instantiate top level object
 $myMultiObject->Harry = new stdClass; # instantiate first sub object
-$myMultiObject->Harry->year = 1972;
-$myMultiObject->Harry->band = 'The Cure';
-$myMultiObject->Harry->size = 10;
+$myMultiObject->Harry->BloodStatus = half-blood;
+$myMultiObject->Harry->Wand = 11, holly, phoenix feather;
+$myMultiObject->Harry->Born = Godric\s Hollow, England;
 
 $myMultiObject->Ron = new stdClass; # instantiate second sub object
-$myMultiObject->Ron->year = 1975;
-$myMultiObject->Ron->band = 'Coldplay';
-$myMultiObject->Ron->size = 8;
+$myMultiObject->Ron->BloodStatus = pure-blood;
+$myMultiObject->Ron->Wand = 12, Ash, unicorn tail hair;
+$myMultiObject->Ron->Born = Ottery St Catchpole, Devon, England;
 
 $myMultiObject->Hermione = new stdClass; #instantiate third sub object
-$myMultiObject->Hermione->year = 1969;
-$myMultiObject->Hermione->band = 'Beach Boys';
-$myMultiObject->Hermione->size = 10;
+$myMultiObject->Hermione->BloodStatus = muggle;
+$myMultiObject->Hermione->Wand = 10 3/4, vine wood, dragon heartstring;
+$myMultiObject->Hermione->Born = England;
 
 print $myMultiObject->Ron->band; # selecting an item
 ```
@@ -88,22 +96,25 @@ print $myMultiObject->Ron->band; # selecting an item
 ## Looping
 
 **foreach**
+The foreach construct provides an easy way to iterate over arrays and objects. On each iteration, the value of the current element is assigned to $value and the internal array pointer is advanced by one (so on the next iteration, you'll be looking at the next element). The second form will additionally assign the current element's key to the $key variable on each iteration.
 
 Simple Arrays `$mySimpleArray = array('First', 'Second', 'Third');`
 ```php
-foreach($mySimpleArray as $variableName) {
-  // do something with $variableName;
+foreach($mySimpleArray as $value) {
+  // do something with $value;
+}
+foreach($mySimpleArray as $key => $value){
+  // do something with $key and $value;
 }
 ```
 
 Multidimensional Arrays
 ```php
-foreach($myMultiArray as $personArrayName => $arrayDetails){
-  // do something with the $arrayDetails[''];
-  echo $personArrayName;      # returns Harry;
-  echo $arrayDetails['year']; # returns 1972;
-  echo $arrayDetails['band']; # returns The Cure;
-  echo $arrayDetails['size']; # returns 10;
+foreach ($multiArrayName as $arrayName => $elementSet) {
+echo "<b>" . $arrayName . "</b><br />";
+  foreach($elementSet as $key => $value) {
+  print $key . ": " . $value . LINEBREAK;
+  }
 }
 ```
 
