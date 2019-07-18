@@ -7,12 +7,12 @@ layout: default
 
 ## Some String Functions
 ```php
-$myString = 'Lorem ipsum dolor sit amet'
-strstr($myString, 'greeking'); # Returns FALSE if the string does not exists.
+$myString = 'We\'re having a party!'
+strstr($myString, 'soiree'); # Returns FALSE if the string does not exists.
 nl2br($myString); # Convert new lines (both n and r) to HTML break tags.
 trim($myString); # Remove white space (spaces, new lines and tabs) from the beginning and end.
 strlen($myString); # Return the length of the string.
-str_replace('party', 'fiesta', $myString); # Replace one part of the string with another.
+str_replace('party', 'fiesta', $myString); # Replace first bit with second bit in third bit.
 strip_tags($myString); # Remove HTML from the string.
 strtoupper($myString); # Convert all the characters to uppercase.
 ucwords($myString); # Capitalize each word.
