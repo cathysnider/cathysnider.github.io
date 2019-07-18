@@ -45,13 +45,13 @@ print $myAssocArray[0]; # returns error
 **Multidimensional.** A nested array.
 ```php
 $myMultiArray = array(
-    'Harry' => array('Blood Status' => 'half-blood', 'Wand' => '11", holly, phoenix feather','Born' => 'Godric\'s Hollow, England',),
-    'Ron' => array('Blood Status' => 'pure-blood','Wand' => '12", Ash, unicorn tail hair','Born' => 'Ottery St Catchpole, Devon, England,',),
-    'Hermione' => array('Blood Status' => 'muggle', 'Wand' => '10 3/4", vine wood, dragon heartstring', 'Born' => 'England',)
+    'Harry' => array('Blood Status' => 'half-blood', 'Wand' => 'holly, Phoenix feather','Patronus' => 'Stag',),
+    'Ron' => array('Blood Status' => 'pure-blood','Wand' => 'Ash, Unicorn tail hair','Patronus' => 'Jack Russell terrier',),
+    'Hermione' => array('Blood Status' => 'muggle', 'Wand' => 'Vine wood, Dragon heartstring', 'Patronus' => 'Otter',)
 );
 
-$myMultiArray['Neville'] = array('year' => 1984,'band' => 'The Beatles','size' => 9,); # adds item to end
-print $myMultiArray['Hermonie']['size']; # selecting an item
+$myMultiArray['Neville'] = array('Blood Status' => "pure-blood",'Wand' => 'Cherry, Unicorn tail','Patronus' => "Non-corporeal",); # adds item to end
+print $myMultiArray['Hermonie']['Wand']; # selecting an item
 ```
 
 ## Some Array Functions
