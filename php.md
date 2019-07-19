@@ -45,9 +45,9 @@ print $myAssocArray[0]; # returns error
 **Multidimensional.** A nested array.
 ```php
 $myMultiArray = array(
-    'Harry' => array('Blood Status' => 'half-blood', 'Wand' => 'holly, Phoenix feather','Patronus' => 'Stag',),
-    'Ron' => array('Blood Status' => 'pure-blood','Wand' => 'Ash, Unicorn tail hair','Patronus' => 'Jack Russell terrier',),
-    'Hermione' => array('Blood Status' => 'muggle', 'Wand' => 'Vine wood, Dragon heartstring', 'Patronus' => 'Otter',)
+    'Harry' => array('Blood Status' => 'Half-blood', 'Wand' => 'Holly & Phoenix feather','Patronus' => 'Stag',),
+    'Ron' => array('Blood Status' => 'Pure-blood','Wand' => 'Ash & Unicorn tail hair','Patronus' => 'Jack Russell Terrier',),
+    'Hermione' => array('Blood Status' => 'Muggle', 'Wand' => 'Vine Wood & Dragon Heartstring', 'Patronus' => 'Otter',)
 );
 
 $myMultiArray['Neville'] = array('Blood Status' => "pure-blood",'Wand' => 'Cherry, Unicorn tail','Patronus' => "Non-corporeal",); # adds item to end
