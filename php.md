@@ -40,7 +40,7 @@ $myAssocArray = array('fruit' => 'mango', 'flag' => FALSE, 'born' => 2001,);
 $myAssocArray['name'] = 'Daffodil'; # adds item to array
 print $myAssocArray['fruit']; # selecting an item
 print $myAssocArray[0]; # returns error
-```
+```php explode
 
 **Multidimensional.** A nested array.
 ```php
@@ -56,10 +56,12 @@ print $myMultiArray['Hermonie']['Wand']; # selecting an item
 
 ## Some Array Functions
 ```php
+explode ( string $delimiter , string $string) # Splits string parameter on boundaries formed by delimiter and returns array of strings 
 array_flip() # flips keys and values so one becomes the other
 array_rand() # returns randomly chosen key
 ```
-Apparently you can't access randomly chosen values; you gotta flip the array and then rand it. `$choice = array_rand(array_flip($mySimpleArray));`
+Apparently you can't access randomly chosen values; you gotta flip the array and then rand it. <br />
+`$choice = array_rand(array_flip($mySimpleArray));`
 
 
 [PHP Manual: Arrays](https://www.php.net/manual/en/language.types.array.php)
