@@ -12,8 +12,11 @@
 - link: /php.html
   name: PHP
 
+- link: /python.html
+  name: Python
+
 - link: /repository.html
-  name: Repository
+  name: Repo
 
 - link: /lando.html
   name: Lando
