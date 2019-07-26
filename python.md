@@ -75,10 +75,18 @@ for d in days:
    print(d)
 numbers=[3,4,5,6,7]
 for n in numbers:
-    print(n) # interates over entire array
+    print(n) # iterates over entire array
 ```
+`(enumerate(myArray))` will return the index number
+
+```python
+days=["Mon","Tues","Wed","Thurs","Fri","Sat","Sun"]
+for i,d in enumerate(days):
+   print(i, d)  # prints index number and array element
+```
+
 Break: if condition is met, loop terminates and processing falls through to next code block.
-Continue: if condition is met, skip rest of loop and continue from the top
+Continue: if condition is met, skip rest of loop for that iteration and continue from the top
 ```
 for (condition):
    if (condition):break
