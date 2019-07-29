@@ -95,13 +95,14 @@ for (condition):
 ```
 
 ## Objects aka Classes
-In Object instantiation, the first parameter of any function with the object is called the `self` parameter. It 1) always refers to the object itself, and 2) is mandatory. It is a reference to the current instance of the class, and is used to access variables that belongs to the class. It is usually named `self` but you can actually call it whatever you like. Again, it has to be the first parameter of any function in the class.
+A class is a code template for creating objects. Each object is an instance of its class. When defining a class, the first parameter of any function with the object is called the `self` parameter. It 1) always refers to the object itself, and 2) is mandatory. It is a reference to the current instance of the class, and is used to access variables that belongs to the class. It is usually named `self` but you can actually call it whatever you like. Again, it has to be the first parameter of any function in the class.
 
 ```python
 class personObject:
-  def __init__(self, name, age): # the init function defines variables
+  def __init__(self, name, age): # init function defines variables that MUST be set at runtime
     self.name = name
     self.age = age
+  gender = "" # variables can be instantiated as null
   def myFunc(self):
     print("Hello, my name is " + self.name)
 
