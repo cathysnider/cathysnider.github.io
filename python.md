@@ -116,6 +116,7 @@ personOne.gender = "male" # set variable value
 ```
 
 ## Misc Libraries
+Oh my god so many of them ... <br />
 [Python Standard Library](https://docs.python.org/3/library/) <br />
 Import Date and Time: `from datetime import [date, time, datetime, timedelta]`
 ```python
@@ -123,5 +124,23 @@ now = datetime.now() # built in method
 print("It is now " , now)
 print("Later on, it will be: ", now + timedelta(days=60, hours=10, minutes=7)) # built in method
 ```
+
+## Data Structures
+ - Arrays
+ - Linked Lists
+ - Stacks and Queues
+ - Hash Tables
+
+## Recursion
+When a program calls itself
+
+## Sorting
+These are serious mathematical puzzle solving
+ - Bubble Sort
+ - Merge Sort
+ - Quick Sort
+
+
+
 
 [back](./)
