@@ -18,7 +18,21 @@ def functionName(num,term):  # no curly braces; yes a colon
 Python lets you call functions with their named parameters named, and not in order. <br />
 `functionName(term="Spring", num=5)`
 
-Variables are typed at time of instantiation.
+ Set a default value for function with example: def myFunction(n=5):
+
+Fun facts <br />
+ - `print('print this', end=' ')` 'end' parameter to use something other that default line return
+
+## Data Types
+ - String
+ - Numeric
+ - Boolean
+ - None
+ - Sequence
+ - Create your own
+
+Variables are typed at time of instantiation. Called 'Duck Typing' -- if it looks like a duck and quacks like a duck it is a duck. Clever.
+
 Variable types can be changed -- just assign a different type value to it.<br />
 ```python
 variableOne = 4; # It's an integer
@@ -144,10 +158,7 @@ These are serious mathematical puzzle solving solutions.
  - Unsorted Lists
  - Sorted Lists
 
-## Functions
-Fun facts <br />
- - `print('print this', end=' ')` 'end' parameter to use something other that default line return
- - set a default value for function with example: myFunction(n=5)
+
 
 
 
