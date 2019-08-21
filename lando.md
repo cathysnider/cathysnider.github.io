@@ -27,7 +27,7 @@ layout: default
    * webroot: .
    * what to call this app: same name as project folder (mySiteName)
 
-   `lando init --source cwd --recipe drupal7  --webroot . --name mySiteName --full`
+   `lando init --source cwd --recipe drupal7  --webroot . --full --name mySiteName`
 
    This creates a .lando.yml file in your project folder
 

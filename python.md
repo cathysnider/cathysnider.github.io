@@ -132,13 +132,17 @@ print("Later on, it will be: ", now + timedelta(days=60, hours=10, minutes=7)) #
  - Hash Tables
 
 ## Recursion
-When a program calls itself
+When a program calls itself. There must be a breaking condition in order to avoid infinite loops. A call stack (implemented with Stack data structure, above) keeps track of the arguments. 
 
 ## Sorting
-These are serious mathematical puzzle solving
+These are serious mathematical puzzle solving solutions.
  - Bubble Sort
  - Merge Sort
  - Quick Sort
+
+## Searching
+ - Unsorted Lists
+ - Sorted Lists
 
 
 
