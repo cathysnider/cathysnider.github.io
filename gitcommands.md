@@ -73,7 +73,7 @@ Add changed files to staging area:<br />
 `git add <filename>`<br />
 
 `git commit -m "Explanatory Message"` <br />
-[As the project drags on]https://xkcd.com/1296/
+[As the project drags on](https://xkcd.com/1296/)
 
 ## Undoing Mess-ups
 ```sh
@@ -81,7 +81,8 @@ git reset <last good SHA> # specifies where the head pointer should point. Very 
 * --soft # leaves staging and working in their later revised state; you'll need to do a merge. The git repository will be reset to an earlier version. Do a Git Diff to see the difference.
 * --mixed # default; moves head to earlier commit; changes staging index to match repository; does not change working directory. We have not lost any work. Do a Git Diff to see the difference.
 * --hard # destructive; moves pointer of repository; makes staging and working directory match repository. You'll lose all work since the last commit. Sometimes you want that.
+* --hard origin/master # nuke this thing: throw away all my staged and unstaged changes, forget everything on my current local branch and make it exactly the same as origin/master
 ```
 
 
-[back]./
+[back](./)
