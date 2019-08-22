@@ -5,7 +5,7 @@ layout: default
 
 # Testing with Behat Locally
 
-Notes on installing a local site and setting up Behat: https://github.com/CuBoulder/express/tree/dev/tests/behat
+[CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat)
 
 ## Install Behat
 
