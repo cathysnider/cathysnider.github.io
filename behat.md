@@ -31,7 +31,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
       With your localhost site address:
 
-      ```yml 
+      ```yml
       bash
           extensions:
            Behat\MinkExtension:
@@ -52,14 +52,17 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
 ## Troubleshooting
 
-If you can no longer login due to too many failed login attempts, empty the flood table.
+If too many failed login attempts, empty the flood table.
 ```sh-session
 lando mysql
 -> use drupal7;
 -> delete from flood;
 -> exit;
 ```
-
+Log everybody out
+```sh-session
+lando drush sqlq "TRUNCATE sessions"
+```
 
 
 [back](./)
