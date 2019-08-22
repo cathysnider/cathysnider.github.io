@@ -69,6 +69,9 @@ layout: default
 1. **Install the bundles if desired:** <br />
    `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y`
 
+1. **Install local users if desired:** <br />
+   `lando drush en cu_local_users -y`
+
 1. **Install test content if desired:** <br />
    `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
