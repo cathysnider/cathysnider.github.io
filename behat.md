@@ -7,7 +7,7 @@ layout: default
 
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat)
 
-## Install Behat
+## Install and Setup
 
 To test with Behat, you'll need to enable all the bundles and install local users.
 
@@ -15,7 +15,7 @@ To test with Behat, you'll need to enable all the bundles and install local user
    In behat folder (/profiles/express/tests/behat): <br />
    `composer install`
 
-1. **Be in root of MySiteName folder and** `start lando`
+1. **Start Lando** `lando start`
 
 1. **Install Behat test module** <br/>
    This enables all the bundles and the local users. <br/>
@@ -41,15 +41,17 @@ To test with Behat, you'll need to enable all the bundles and install local user
       bash
           extensions:
            Behat\MinkExtension:
-            base_url: "http://mySiteName.lndo.site" # NOT THE SECURE SERVER
+            base_url: "http://mySiteName.lndo.site" # NOT THE SECURE SERVER PLEASE
       ```
+
 1. **Start webserver** <br />
-   `lando drush runserver 127.0.0.1:8079`
+   `lando drush runserver 127.0.0.1:8079` <br />
+   (be sure lando is running)
 
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    Example: <br />
-   `./bin/behat --config behat.local.yml --verbose --tags '~@broken&&~@javascript'`
+   `./bin/behat --config behat.local.yml --verbose --tags '~@broken&&~@javascript'` <br />
    `./bin/behat --config behat.local.yml --strict --stop-on-failure --verbose --tags '@layout'`
 
 ## Troubleshooting
