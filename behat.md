@@ -48,11 +48,15 @@ To test with Behat, you'll need to enable all the bundles and install local user
    `lando drush runserver 127.0.0.1:8079` <br />
    (be sure lando is running)
 
+
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    Example: <br />
    `./bin/behat --config behat.local.yml --verbose --tags '~@broken&&~@javascript'` <br />
    `./bin/behat --config behat.local.yml --strict --stop-on-failure --verbose --tags '@layout'`
+
+   Tags: specify desired tag(s) either as parameters in the command or in behat.local.yml <br />
+   Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
 
 ## Troubleshooting
 
