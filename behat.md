@@ -7,9 +7,13 @@ layout: default
 
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat)
 
-## Install and Setup
+## Download Sauce Connect Proxy for JavaScript test
 
-To test with Behat, you'll need to enable all the bundles and install local users.
+[Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy)<br />
+
+## Install and Setup the Local Site
+
+To test with Behat, you'll need to enable all the bundles and install local users. And install Sauce Connect Proxy to run the JavaScript tests.
 
 1. **Install behat dependencies** <br />
    In behat folder (/profiles/express/tests/behat): <br />
@@ -41,13 +45,24 @@ To test with Behat, you'll need to enable all the bundles and install local user
       bash
           extensions:
            Behat\MinkExtension:
-            base_url: "http://mySiteName.lndo.site" # NOT THE SECURE SERVER PLEASE
+            base_url: "https://mySiteName.lndo.site"
       ```
+## Running Tests
 
 1. **Start webserver** <br />
    `lando drush runserver 127.0.0.1:8079` <br />
    (be sure lando is running)
 
+1. **Start Sauce Connect**
+   Login to Sauce Connect and get command with access keys
+   [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) <br />
+   Login to Sauce Connect and get command with access keys< br />
+   Paste into command line of Sauce Connect folder; wait for connnection
+   Back to Sauce Connect Online. You should see Active Tunnel.
+   - Click 'Tunnels' on the left <br/>
+   - Scroll to bottom; copy command to start with Authentication code
+   - In Terminal, go to Sauce's install directory and paste in command
+   - Wait for approval 'Sauce Connect Is Up, you may start your tests'
 
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
