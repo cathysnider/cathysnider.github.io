@@ -6,6 +6,7 @@ layout: default
 # Testing with Behat Locally
 
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat)
+[Hosted Selenium Service Can't Connect To Travis](https://github.com/CuBoulder/express/issues/3035)
 
 ## Download Sauce Connect Proxy for JavaScript test
 
