@@ -56,13 +56,12 @@ To test with Behat, you'll need to enable all the bundles and install local user
 1. **Start Sauce Connect**
    Login to Sauce Connect and get command with access keys
    [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) <br />
-   Login to Sauce Connect and get command with access keys< br />
-   Paste into command line of Sauce Connect folder; wait for connnection
-   Back to Sauce Connect Online. You should see Active Tunnel.
+   Login to Sauce Connect and get command with access keys<br />
    - Click 'Tunnels' on the left <br/>
    - Scroll to bottom; copy command to start with Authentication code
-   - In Terminal, go to Sauce's install directory and paste in command
-   - Wait for approval 'Sauce Connect Is Up, you may start your tests'
+   - In Terminal, go to Sauce's install directory and paste in command; wait for connection
+   - Back to Sauce Connect Online. You should see Active Tunnel.
+   - Go to SauceLabs; click 'Web Testing'; verify URL and Start Session
 
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
