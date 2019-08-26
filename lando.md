@@ -19,23 +19,22 @@ layout: default
    Go back to root of mySiteName folder <br />
    `cd ../`
 
-   and initialize it for Lando with the following params:
+   and initialize it for Lando:
 
+   `lando init --source cwd --recipe drupal7  --webroot . --full --name mySiteName`
+
+  This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours:
    `lando init`
    * codebase: current working directory
    * recipe: drupal7
    * webroot: .
    * what to call this app: same name as project folder (mySiteName)
 
-   `lando init --source cwd --recipe drupal7  --webroot . --full --name mySiteName`
-
-   This creates a .lando.yml file in your project folder
-
 1. **Start Lando; check info**  <br />
    `lando start`  <br />
    `lando info`
 
-1. **Install Drupal with drush** <br />
+1. **Install the chosen Drupal Profile with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
 
    Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
