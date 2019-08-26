@@ -23,7 +23,7 @@ layout: default
 
    `lando init --source cwd --recipe drupal7  --webroot . --full --name mySiteName`
 
-  This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours:
+   This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
    `lando init`
    * codebase: current working directory
    * recipe: drupal7
