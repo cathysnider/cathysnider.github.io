@@ -91,7 +91,7 @@ Sadly, this does not work with our configuration at this time
 
 ### Destroying a Lando Project
 `lando destroy` <br />
-Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its content. It does not delete the project files cloned from GitHub. You can start over from Step 3: Start Lando; then enable bundles, local users and test content.
+Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its contents. It does not delete Drupal core or the Express Profile files cloned from GitHub. You can start over from Step 3: Start Lando; then enable bundles, local users and test content.
 
 ## Installing Lando (One Time Setup)
 
