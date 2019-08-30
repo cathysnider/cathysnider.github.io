@@ -16,10 +16,11 @@ layout: default
    In behat folder (/profiles/express/tests/behat): <br />
    `composer install`
 
-1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
-      This allows the local users to login to the site. These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
-
 1. **Start Lando** `lando start`
+   You need the Lando container for the rest of this.
+
+1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
+   This allows the local users to login to the site. These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
 1. **Install Behat test module** <br/>
    To test with Behat, you'll need to enable all the bundles and install local users. <br />
