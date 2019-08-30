@@ -8,26 +8,23 @@ layout: default
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat)
 [Hosted Selenium Service Can't Connect To Travis](https://github.com/CuBoulder/express/issues/3035)
 
-## Download Sauce Connect Proxy for JavaScript test
+1. If you haven't installed Sauce Proxy on your machine; now is the time to do so. See below.
 
-[Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy)<br />
-
-## Install and Setup the Local Site
-
-To test with Behat, you'll need to enable all the bundles and install local users. And install Sauce Connect Proxy to run the JavaScript tests.
+## Prep Your Project for Behat Tests (a One Time Setup)
 
 1. **Install behat dependencies** <br />
    In behat folder (/profiles/express/tests/behat): <br />
    `composer install`
 
+1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
+      This allows the local users to login to the site. These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
+
 1. **Start Lando** `lando start`
 
 1. **Install Behat test module** <br/>
-   This enables all the bundles and the local users. <br/>
-   `lando drush en cu_behat_tests -y`
-
-1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
-   You are now able to sign on as developer/developer or any other role. These users are necessary for local Behat testing. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
+   To test with Behat, you'll need to enable all the bundles and install local users. <br />
+   Supposedly cu_behat_tests accomplishes this. <br/>
+   `lando drush en cu_behat_tests -y` <br />
 
 1. **Update behat.local.yml with config info for lando server** <br />
    `lando info` to verify your local server URL (should be http://mySiteName.lndo.site)<br />
@@ -48,21 +45,14 @@ To test with Behat, you'll need to enable all the bundles and install local user
            Behat\MinkExtension:
             base_url: "https://mySiteName.lndo.site"
       ```
-## Running Tests
+
+## Running the Behat Tests
+
+1. **Start Sauce Proxy Server** <br />
+   cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
 
 1. **Start webserver** <br />
-   `lando drush runserver 127.0.0.1:8079` <br />
-   (be sure lando is running)
-
-1. **Start Sauce Connect**
-   Login to Sauce Connect and get command with access keys
-   [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) <br />
-   Login to Sauce Connect and get command with access keys<br />
-   - Click 'Tunnels' on the left <br/>
-   - Scroll to bottom; copy command to start with Authentication code
-   - In Terminal, go to Sauce's install directory and paste in command; wait for connection
-   - Back to Sauce Connect Online. You should see Active Tunnel.
-   - Go to SauceLabs; click 'Web Testing'; verify URL and Start Session
+   `lando drush runserver 127.0.0.1:8079`
 
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
@@ -72,6 +62,10 @@ To test with Behat, you'll need to enable all the bundles and install local user
 
    Tags: specify desired tag(s) either as parameters in the command or in behat.local.yml <br />
    Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
+
+1. **Login to Sauce Connect website to view JS tests**
+    [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) <br />
+
 
 ## Troubleshooting
 
@@ -86,6 +80,12 @@ Log everybody out
 ```sh-session
 lando drush sqlq "TRUNCATE sessions"
 ```
+
+## Installing Sauce Labs Proxy (One Time Setup)
+
+1. Download and install Sauce Connect Proxy for the JavaScript test
+   [Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy).
+1. Add the environmental variables (user name and access key) to .bash_profile (TO DO: check if these can be kept in Lando file)
 
 
 [back](./)

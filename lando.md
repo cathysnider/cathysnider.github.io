@@ -16,7 +16,7 @@ layout: default
    `git clone https://github.com/CuBoulder/express_mono.git express`
 
 1. **Initialize Lando in project folder**<br />
-   Go back to root of mySiteName folder <br />
+   You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder <br />
    `cd ../`
 
    and initialize it for Lando:
@@ -33,6 +33,8 @@ layout: default
 1. **Start Lando; check info**  <br />
    `lando start`  <br />
    `lando info`
+
+   From now on, all your `drush` commands must be `lando drush`.
 
 1. **Install the chosen Drupal Profile with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
