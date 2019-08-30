@@ -55,6 +55,12 @@ layout: default
 1. **Start webserver** <br />
    `lando drush runserver 127.0.0.1:8079`
 
+1. **Add Environmental Variables to behat.local.yml file** <br />
+   The session 'sauce/sauce_labs' must have environmental variables added as children.
+   username: xxx
+   access_key: 99999999
+   connect: true
+
 1. **Run the Behat tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    Example: <br />
@@ -86,7 +92,7 @@ lando drush sqlq "TRUNCATE sessions"
 
 1. Download and install Sauce Connect Proxy for the JavaScript test
    [Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy).
-1. Add the environmental variables (user name and access key) to .bash_profile (TO DO: check if these can be kept in Lando file)
+   The environmental variables user_name and access_key need to be added to behat.local.yml, unless they can be added elsewhere, such as .bash_profile or Lando somewhere)
 
 
 [back](./)
