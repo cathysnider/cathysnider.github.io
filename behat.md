@@ -12,19 +12,20 @@ layout: default
 1. **Install behat dependencies** <br />
    In behat folder (/profiles/express/tests/behat):  `composer install`
 
-1. **Start Lando** `lando start`
+1. **Start Lando** `lando start` <br />
    You need the Lando container for the rest of this.
 
 1. **Install Behat test module** <br/>
-   To test with Behat, you'll need to enable all the bundles and install local users. <br />
-   The cu_behat_tests module accomplishes this. <br/>
+   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. <br/>
    `lando drush en cu_behat_tests -y` <br />
 
-1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
-    This allows the local users to login to the site. We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
+   Note: We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
-1. **Update behat.local.yml with config info for lando server and environmental variables** <br />
-   `lando info` to verify your local server URL (should be http://mySiteName.lndo.site)<br />
+1. **Login to site and put it in Mixed Mode (config >> LDAP >> Tab 4: Authentication)** <br/>
+    So our precious local users can login to the site.
+
+1. **Update behat.local.yml with local environmental variables (i.e. server URL and access info)** <br />
+   `lando info` to verify your local server URL (should be `http://mySiteName.lndo.site`)<br />
    In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
 
       ```yml
