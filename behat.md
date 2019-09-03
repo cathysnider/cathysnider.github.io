@@ -62,12 +62,12 @@ layout: default
 
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
-   Example: <br />
+   The basic command is <br />
    `./bin/behat --config behat.local.yml` <br />
 
    Add other parameters as necessary: <br />
    ```sh
-   --verbose #
+   --verbose
    --strict
    --stop-on-failure
    --tags '@runThisTag'
@@ -84,16 +84,14 @@ layout: default
 ## Troubleshooting
 
 If too many failed login attempts, empty the flood table.
-```sh-session
+```sh
 lando mysql
 -> use drupal7;
 -> delete from flood;
 -> exit;
 ```
 Log everybody out
-```sh-session
-lando drush sqlq "TRUNCATE sessions"
-```
+`lando drush sqlq "TRUNCATE sessions"`
 
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat) <br />
 [Hosted Selenium Service Can't Connect To Travis](https://github.com/CuBoulder/express/issues/3035)
