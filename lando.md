@@ -50,30 +50,35 @@ layout: default
    **cu_pantheon_core** <br />
      `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-    ### Installing Drupal via the browser:
+There, you are done. Go have fun coding.
 
-    1. **Install Drupal via browser** <br />
-       Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
-       Go through the installation process
-       * database name: drupal7
-       * database username: drupal7
-       * database password: drupal7
-       * Advanced Options:
-         * database host: database
-         * database port: 3306
+### Installing Drupal via the browser:
 
-    1. **Install Express Profile -- one of:**
-       * Production (cu-core)
-       * Testing (cu_testing_core)
-       * Pantheon (cu_pantheon_core)
+Should you desire to install Drupal via the browser rather than the command line, here are the specs:
 
-1. **Install the bundles if desired:** <br />
+* **Install Drupal via browser** <br />
+  Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
+  Go through the installation process
+   * database name: drupal7
+   * database username: drupal7
+   * database password: drupal7
+   * Advanced Options:
+     * database host: database
+     * database port: 3306
+
+* **Install Express Profile -- one of:**
+  * Production (cu-core)
+  * Testing (cu_testing_core)
+  * Pantheon (cu_pantheon_core)
+
+## Install Test Content  
+
+For functional testing, you may want to install a bunch of test content.
+
+1. **Enable the bundles** <br />
    `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y`
 
-1. **Install local users if desired:** <br />
-   `lando drush en cu_local_users -y`
-
-1. **Install test content if desired:** <br />
+1. **Enable test content** <br />
    `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
 ## Lando Problems
