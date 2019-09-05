@@ -56,6 +56,11 @@ layout: default
 1. **Start Sauce Proxy Server** <br />
    cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
 
+1. **Stop and Start Lando**
+   If you forgot to stop Lando last night, you'll want to do so now. Otherwise the next command may have trouble. <br />
+   `lando stop` <br />
+   `lando start`
+
 1. **Start webserver** <br />
    From project root: <br />
    `lando drush runserver 127.0.0.1:8079`
@@ -100,7 +105,7 @@ Log everybody out
 
 1. Download and install Sauce Connect Proxy for the JavaScript test
    [Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy).
-   The environmental variables user_name and access_key need to be added to behat.local.yml, unless they can be added elsewhere, such as .bash_profile or Lando somewhere)
+
 
 
 [back](./)
