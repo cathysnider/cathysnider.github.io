@@ -16,7 +16,7 @@ layout: default
    You need the Lando container for the rest of this.
 
 1. **Install Behat test module** <br/>
-   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. <br/>
+   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. Go stretch your legs while it all installs. <br/>
    `lando drush en cu_behat_tests -y` <br />
 
    Note: We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
@@ -25,7 +25,7 @@ layout: default
     So our precious local users can login to the site.
 
 1. **Update behat.local.yml with local environmental variables (i.e. server URL and access info)** <br />
-   `lando info` to verify your local server URL (should be `http://mySiteName.lndo.site`)<br />
+   `lando info` to verify your local server URL (`http://mySiteName.lndo.site`)<br />
    In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
 
       ```yml
@@ -42,7 +42,7 @@ layout: default
         base_url: "http://mySiteName.lndo.site"
       ```
 
-      You'll need to add the Environmental Variables username and access key to the session called 'sauce'. (Get this from a team member.)
+      You'll need to add the Environmental Variables username and access key to the session called 'sauce'. (Get these from a team member.)
       ``` yml
       sauce:
         sauce_labs:
@@ -50,6 +50,7 @@ layout: default
           access_key: ACCESS-KEY
           connect: true
       ```
+Your project is now ready to run the automated tests.
 
 ## Running the Behat Tests
 
@@ -57,7 +58,7 @@ layout: default
    cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
 
 1. **Stop and Start Lando** <br />
-   If you forgot to stop Lando last night, you'll want to do so now. Otherwise the next command may have trouble. <br />
+   If you forgot to Cntl-C the server last night, you'll have to force it to quit by stopping and starting Lando. Otherwise the next command may have trouble. <br />
    `lando stop` <br />
    `lando start`
 
@@ -88,14 +89,14 @@ layout: default
 
 ## Troubleshooting
 
-If too many failed login attempts, empty the flood table.
+* If too many failed login attempts, empty the flood table.
 ```sh
 lando mysql
 -> use drupal7;
 -> delete from flood;
 -> exit;
 ```
-Log everybody out
+* Log everybody out <br />
 `lando drush sqlq "TRUNCATE sessions"`
 
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat) <br />
