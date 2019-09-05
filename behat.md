@@ -5,7 +5,7 @@ layout: default
 
 # Testing with Behat Locally
 
-* If you haven't installed Sauce Proxy on your machine; now is the time to do so. See **Installing Sauce Labs Proxy** below.
+* If you haven't installed Sauce Connect Proxy on your machine; now is the time to do so. See **Installing Sauce Connect Proxy** below.
 
 ## Prep Your Project for Behat Tests (a One Time Setup)
 
@@ -101,9 +101,9 @@ Log everybody out
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat) <br />
 [Hosted Selenium Service Can't Connect To Travis](https://github.com/CuBoulder/express/issues/3035)
 
-## Installing Sauce Labs Proxy (One Time Setup)
+## Installing Sauce Connect Proxy (One Time Setup)
 
-1. Download and install Sauce Connect Proxy for the JavaScript test
+1. Download and install Sauce Connect Proxy for the JavaScript testing.
    [Get Sauce Connect Proxy](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy).
 
 
