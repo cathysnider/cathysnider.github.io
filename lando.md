@@ -5,6 +5,8 @@ layout: default
 
 # Drupal 7 Express install with Lando
 
+* If you haven’t installed Lando on your machine; now is the time to do so. See **Installing Lando** below.
+
 ## Creating Web Express Project
 
 1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
