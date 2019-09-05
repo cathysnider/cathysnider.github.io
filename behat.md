@@ -54,6 +54,8 @@ Your project is now ready to run the automated tests.
 
 ## Running the Behat Tests
 
+### Start the Servers
+
 1. **Start Sauce Proxy Server** <br />
    cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
 
@@ -66,6 +68,8 @@ Your project is now ready to run the automated tests.
    From project root: <br />
    `lando drush runserver 127.0.0.1:8079`
 
+### Run the Tests
+
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    The basic command is <br />
@@ -77,14 +81,13 @@ Your project is now ready to run the automated tests.
    --strict
    --stop-on-failure
    --tags '@runThisTag'
-
    ```
 
    Tags: specify desired tag(s) either as parameters in the command or in behat.local.yml <br />
    Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
 
 1. **Login to Sauce Connect website to view JS tests**<br />
-   [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) should you need to review what's going on. The login credentials are shared with the team via LastPass.
+   [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) should you need to review what's going on with JavaScript. The login credentials are shared with the team via LastPass.
 
 
 ## Troubleshooting
