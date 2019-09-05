@@ -56,7 +56,7 @@ layout: default
 1. **Start Sauce Proxy Server** <br />
    cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
 
-1. **Stop and Start Lando**
+1. **Stop and Start Lando** <br />
    If you forgot to stop Lando last night, you'll want to do so now. Otherwise the next command may have trouble. <br />
    `lando stop` <br />
    `lando start`
