@@ -5,7 +5,7 @@ layout: default
 
 # Testing with Behat Locally
 
-1. If you haven't installed Sauce Proxy on your machine; now is the time to do so. See **Installing Sauce Labs Proxy** below.
+* If you haven't installed Sauce Proxy on your machine; now is the time to do so. See **Installing Sauce Labs Proxy** below.
 
 ## Prep Your Project for Behat Tests (a One Time Setup)
 
