@@ -44,7 +44,7 @@ Use the `+` to add integers and concatenate strings. <br />
 Convert integer to string with str()
 `print (variableOne + str(3))`
 
-In Python 3, all types are classes. 
+In Python 3, all types are classes.
 
 The `range()` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number. `range(start,stop,step)` It actually stops right before the stop number. Default is `range(0,stop,1)` note that stop number MUST be supplied. <br />
 ```python
@@ -160,6 +160,17 @@ These are serious mathematical puzzle solving solutions.
  - Unsorted Lists
  - Sorted Lists
 
+## Strings in Python
+ Define multi-line strings with three quotes and it will print that way.
+ ```
+ myString = '''
+   a whole bunch of lines of text
+   more and more text
+ '''
+ ```
+ Reference characters in strings by their index value. Example:
+ `myMessage = 'Python for Beginners'`
+ `myMessage[0]` will return 'P'; `myMessage[7]` returns 'f'; AND you can count backwards:  `myMessage[-1]` returns the last character in the string. `myMessage[0:3]` returns a range. As in all Python ranges, the range stops right BEFORE the specified number. The specified number is not included in the range. 
 
 
 
