@@ -6,8 +6,11 @@
 - link: /markdown.html
   name: Markdown
 
+- link: /bash.html
+  name: Bash
+
 - link: /gitcommands.html
-  name: Git Commands
+  name: Git
 
 - link: /php.html
   name: PHP
