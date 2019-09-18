@@ -169,8 +169,9 @@ These are serious mathematical puzzle solving solutions.
  '''
  ```
  Reference characters in strings by their index value. Example:
- `myMessage = 'Python for Beginners'`
- `myMessage[0]` will return 'P'; `myMessage[7]` returns 'f'; AND you can count backwards:  `myMessage[-1]` returns the last character in the string. `myMessage[0:3]` returns a range. As in all Python ranges, the range stops right BEFORE the specified number. The specified number is not included in the range. Ranges: default start = 0; default end = 0. So `[:]` is essentially "start to end"
+ `myMessage = 'Python for Beginners'` <br />
+ `myMessage[0]` will return 'P'; `myMessage[7]` returns 'f'; AND you can count backwards:  `myMessage[-1]` returns the last character in the string. <br />
+ `myMessage[0:3]` returns a range. As in all Python ranges, the range stops right BEFORE the specified index; that is, the character at the specified index number is not included in the return set.  Ranges: default start = 0; default end = 0. So `[:]` is essentially "start to end"
 
 ### Formatted Strings
 Formatted Strings make it easier to visualize the output of a dynamically generated string. <br />
@@ -179,6 +180,26 @@ A formatted string is prefixed with an 'f'. <br />
 `message = f'{firstName} {lastName} is {status}'` Note the awesomeness of not having to concatenate it all.  <br />
 
 ### String Methods
+len(myString): length (This function is actually general purpose; not a string method)<br />
+```sh
+myString.AllKindsOfStuff() <br />
+myString.find('n') # Returns an index number; if not found, returns -1
+myString.replace('C','K') # Changes out first for second
+```
+'IN' operator: returns true or false. <br />
+`'James' in myString`
+
+## Arithmetic Operations
+Number types: Integers and Floats <br />
+Operators: `+` addition; `-` subtraction; `/` division; `//` division return integer; `%` division return remainder; `**` power of <br />
+Augmented Assignment Operator:
+
+
+
+
+
+
+
 
 
 
