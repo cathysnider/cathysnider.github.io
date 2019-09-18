@@ -170,7 +170,7 @@ These are serious mathematical puzzle solving solutions.
  ```
  Reference characters in strings by their index value. Example:
  `myMessage = 'Python for Beginners'`
- `myMessage[0]` will return 'P'; `myMessage[7]` returns 'f'; AND you can count backwards:  `myMessage[-1]` returns the last character in the string. `myMessage[0:3]` returns a range. As in all Python ranges, the range stops right BEFORE the specified number. The specified number is not included in the range. 
+ `myMessage[0]` will return 'P'; `myMessage[7]` returns 'f'; AND you can count backwards:  `myMessage[-1]` returns the last character in the string. `myMessage[0:3]` returns a range. As in all Python ranges, the range stops right BEFORE the specified number. The specified number is not included in the range. Ranges: default start = 0; default end = 0. So `[:]` is essentially "start to end"
 
 
 
