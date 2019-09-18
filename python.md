@@ -178,6 +178,8 @@ A formatted string is prefixed with an 'f'. <br />
 
 `message = f'{firstName} {lastName} is {status}'` Note the awesomeness of not having to concatenate it all.  <br />
 
+### String Methods
+
 
 
 
