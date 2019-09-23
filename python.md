@@ -192,7 +192,7 @@ myString.replace('C','K') # Changes out first for second
 ## Arithmetic Operations
 Number types: Integers and Floats <br />
 Operators: `+` addition; `-` subtraction; `/` division; `//` division return integer; `%` division return remainder; `**` power of <br />
-Augmented Assignment Operator:
+Augmented Assignment Operators: `+=`; `-=`
 
 
 
