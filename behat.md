@@ -22,8 +22,8 @@ layout: default
    Note: We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
 1. **Put site in Mixed Mode**
-    So our precious local users can login to the site.
-    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`
+    So our precious local users can login to the site. <br />
+    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`<br />
     (in the browser: (admin/config/people/ldap/authentication)
 
 1. **Update behat.local.yml with local environmental variables (i.e. server URL and access info)** <br />
