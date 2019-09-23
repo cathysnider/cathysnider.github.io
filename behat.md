@@ -9,26 +9,27 @@ layout: default
 
 ## Prep Your Project for Behat Tests (a One Time Setup)
 
-1. **Install behat dependencies** <br />
-   In behat folder (/profiles/express/tests/behat):  `composer install`
+1. **Install behat dependencies** `composer install` <br />
+   In behat folder (/profiles/express/tests/behat):  
 
-1. **Start Lando** `lando start` <br />
+1. **Start Lando** <br />
+   `lando start` <br />
    You need the Lando container for the rest of this.
 
-1. **Install Behat test module** <br/>
-   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. Go stretch your legs while it all installs. <br/>
-   `lando drush en cu_behat_tests -y` <br />
+1. **Install Behat test module**  `lando drush en cu_behat_tests -y` <br/>
+   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. Go stretch your legs while it all installs.
 
    Note: We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 
-1. **Put site in Mixed Mode**
-    So our precious local users can login to the site. <br />
-    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`<br />
-    (in the browser: (admin/config/people/ldap/authentication)
+1. **Put site in Mixed Mode**<br />
+   `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"` <br />
+   So our precious local users can login to the site. <br />
+   (in the browser: (admin/config/people/ldap/authentication)
 
-1. **Update behat.local.yml with local environmental variables (i.e. server URL and access info)** <br />
+1. **Duplicate behat.local.yml to my.behat.local.yml and update it with local environmental variables (i.e. server URL and access info)**
+   You'll use my.behat.local.yml to run local tests. It is GitIgnored.
    `lando info` to verify your local server URL (`http://mySiteName.lndo.site`)<br />
-   In behat folder (/profiles/express/tests/behat), edit behat.local.yml file and replace:
+   In behat folder (/profiles/express/tests/behat), edit my.behat.local.yml file and replace:
 
       ```yml
       extensions:
@@ -59,7 +60,7 @@ Your project is now ready to run the automated tests.
 ### Start the Servers
 
 1. **Start Sauce Proxy Server** <br />
-   cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Get this from a team member)<br />
+   cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Same info as in my.behat.local.yml; get from a team member)<br />
 
 1. **Stop and Start Lando** <br />
    If you forgot to Cntl-C the server last night, you'll have to force it to quit by stopping and starting Lando. Otherwise the next command may have trouble. <br />
@@ -75,7 +76,7 @@ Your project is now ready to run the automated tests.
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    The basic command is <br />
-   `./bin/behat --config behat.local.yml` <br />
+   `./bin/behat --config my.behat.local.yml` <br />
 
    Add other parameters as necessary: <br />
    ```sh
@@ -85,7 +86,7 @@ Your project is now ready to run the automated tests.
    --tags '@runThisTag'
    ```
 
-   Tags: specify desired tag(s) either as parameters in the command or in behat.local.yml <br />
+   Tags: specify desired tag(s) either as parameters in the command or in my.behat.local.yml <br />
    Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
 
 1. **Login to Sauce Connect website to view JS tests**<br />
