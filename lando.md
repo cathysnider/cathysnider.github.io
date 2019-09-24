@@ -23,7 +23,7 @@ layout: default
 
    and initialize it for Lando:
 
-   `lando init --source cwd --recipe drupal7  --webroot . --full --name mySiteName`
+   `lando init --source cwd --recipe drupal7  --webroot . --full --name {mySiteName}`
 
    This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
    `lando init`
