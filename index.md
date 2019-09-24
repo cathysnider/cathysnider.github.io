@@ -10,12 +10,4 @@ Introductory Text here
 
 ## My Links
 
-[All About Markdown](markdown.html)
-
-[Git Basics and Commands](gitcommands.html)
-
-[Creating a New Repository](repository.html)
-
-[Working with Lando](lando.html)
-
-[Pantheon](pantheon.html)
+[Download Site Creation Script](sitecreate.sh)
