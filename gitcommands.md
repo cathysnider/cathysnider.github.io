@@ -35,6 +35,7 @@ git fetch # pulls changes from the origin-master branch
 git pull # does a git fetch followed by a git merge
 git push # pushes committed changed up to remote
 git push --set-upstream origin {branchName} # creates remote branch and pushes to it
+git remote remove origin # disconnects from origin so you can do your Drupal lessons w/o messing up Express
 ```
 
 ## Branches
