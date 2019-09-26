@@ -3,7 +3,7 @@ title: Working with Lando
 layout: default
 ---
 
-# Drupal 7 Express install with Lando
+# Drupal 7 Standard or Express install with Lando
 
 * If you haven’t installed Lando on your machine; now is the time to do so. See **Installing Lando** below.
 
@@ -16,6 +16,9 @@ layout: default
    cd into profiles folder and clone down the ExpressMono profile into folder named 'express'<br />
    `cd {mySiteName}/profiles` <br />
    `git clone https://github.com/CuBoulder/express_mono.git express`
+
+   if PlainOldDrupal7: don't forget to copy default.settings.php to settings.php and allow write privileges <br />
+   `chmod a+w sites/default`
 
 1. **Initialize Lando in project folder**<br />
    You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder <br />
@@ -41,15 +44,18 @@ layout: default
 1. **Install the chosen Drupal Profile with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
 
+  **PlainOldDrupal7**
+  `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+
    Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
 
-   **cu_core** <br />
+   **Express cu_core** <br />
      `lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-   **cu_testing_core** <br />
+   **Express cu_testing_core** <br />
      `lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-   **cu_pantheon_core** <br />
+   **Express cu_pantheon_core** <br />
      `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 There, you are done. Go have fun coding.
