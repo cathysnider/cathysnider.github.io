@@ -7,7 +7,9 @@ layout: default
 
 * If you haven’t installed Lando on your machine; now is the time to do so. See **Installing Lando** below.
 
-## Creating Web Express Project
+## Creating Drupal Project
+
+### Web Express
 
 1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
    Specifically, clone CU Boulder's Hardened Drupal 7 into specified project folder:<br />
@@ -17,6 +19,8 @@ layout: default
    `cd {mySiteName}/profiles` <br />
    `git clone https://github.com/CuBoulder/express_mono.git express`
 
+### Plain Old Drupal
+   Unzip Drupal 7 Tarball; rename folder to something workable like {mySiteName}. <br />
    if PlainOldDrupal7: don't forget to copy default.settings.php to settings.php and allow write privileges <br />
    `chmod a+w sites/default`
 
@@ -59,6 +63,21 @@ layout: default
      `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 There, you are done. Go have fun coding.
+
+## Using SequelPro
+
+`lando info` to get the port for external connection. It changes every time you restart Lando on your project.
+
+Sequel Pro settings are: <br />
+Standard <br />
+Host: 127.0.0.1<br />
+Username: drupal7 <br />
+Password: drupal7 <br />
+Database: drupal7 <br />
+Port: Use External Port Number.  <br />
+Click 'Connect'
+
+
 
 ### Installing Drupal via the browser:
 
