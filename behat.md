@@ -16,8 +16,9 @@ layout: default
    `lando start` <br />
    You need the Lando container for the rest of this.
 
-1. **Install Behat test module**  `lando drush en cu_behat_tests -y` <br/>
-   To test with Behat, you'll need to enable all the bundles and install local users. The cu_behat_tests module accomplishes this. Go stretch your legs while it all installs.
+1. **Install Behat test module**  <br />
+   `lando drush en cu_behat_tests -y` <br/>
+   This module enables all the bundles and installs local users. Go stretch your legs while it all installs.
 
    Note: We'll especially need to use these local users when the WebExp team users are not longer automatically added to Express installs.
 

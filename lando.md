@@ -25,19 +25,14 @@ layout: default
    `chmod a+w sites/default`
 
 1. **Initialize Lando in project folder**<br />
-   You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder <br />
-   `cd ../`
-
-   and initialize it for Lando:
-
-   `lando init --source cwd --recipe drupal7  --webroot . --full --name {mySiteName}`
-
-   This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
+   You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder   `cd ../`  and initialize it for Lando. This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
    `lando init`
    * codebase: cwd (current working directory)
    * recipe: drupal7
    * webroot: . (That there's a dot)
    * what to name this: same as project folder (aka mySiteName)
+
+   `lando init --source cwd --recipe drupal7  --webroot . --full --name {mySiteName}`
 
 1. **Start Lando; check info**  <br />
    `lando start`  <br />
@@ -60,7 +55,23 @@ layout: default
    **Express cu_pantheon_core** <br />
    `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
+
+1. **Enable local login** <br />
+   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users.
+   `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"` <br />
+   `lando drush en cu_local_users`
+
+   **PlainOldDrupal7** <br />
+   For local sites where you may not have LDAP ability to login, or if you are working locally without internet access, use the "drush uli" command: <br />
+   In the express site folder, type
+   `lando drush uli sniderc` ... `lando drush uli admin` ... use admin password. <br />
+   It will return a string. Grab everything from 'user' on <br />
+   `user/reset/{aBunchOfNumbers}/login`  and paste into browser.
+
+
 There, you are done. Go have fun coding.
+
+
 
 #### Installing Drupal via the browser:
 
@@ -88,6 +99,8 @@ For functional testing, you may want to install a bunch of test content.
 
 1. **Enable the bundles** <br />
    `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y`
+
+   or
 
    `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_feeds_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_seo_bundle cu_social_media_bundle cu_forms_bundle cu_video_hero_unit_bundle cu_publications_bundle express_collections_bundle express_localist_bundle cu_digital_campaign_bundle cu_mega_menu_bundle cu_livestream_bundle cu_content_sequence_bundle cu_newsletter_bundle cu_campus_news_bundle express_responsive_visibility_bundle -y`
 
