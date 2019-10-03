@@ -48,38 +48,21 @@ layout: default
 1. **Install the chosen Drupal Profile with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
 
-  **PlainOldDrupal7**
-  `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
-
-   Set profile configure form options to cu_core, cu_testing_core, or cu_pantheon_core:
+   **PlainOldDrupal7**<br />
+   `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
    **Express cu_core** <br />
-     `lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+   `lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
    **Express cu_testing_core** <br />
-     `lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+   `lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
    **Express cu_pantheon_core** <br />
-     `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+   `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 There, you are done. Go have fun coding.
 
-## Using SequelPro
-
-`lando info` to get the port for external connection. It changes every time you restart Lando on your project.
-
-Sequel Pro settings are: <br />
-Standard <br />
-Host: 127.0.0.1<br />
-Username: drupal7 <br />
-Password: drupal7 <br />
-Database: drupal7 <br />
-Port: Use External Port Number.  <br />
-Click 'Connect'
-
-
-
-### Installing Drupal via the browser:
+#### Installing Drupal via the browser:
 
 Should you desire to install Drupal via the browser rather than the command line, here are the specs:
 
@@ -98,6 +81,7 @@ Should you desire to install Drupal via the browser rather than the command line
   * Testing (cu_testing_core)
   * Pantheon (cu_pantheon_core)
 
+
 ## Install Test Content  
 
 For functional testing, you may want to install a bunch of test content.
@@ -105,10 +89,36 @@ For functional testing, you may want to install a bunch of test content.
 1. **Enable the bundles** <br />
    `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y`
 
+   `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_feeds_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_seo_bundle cu_social_media_bundle cu_forms_bundle cu_video_hero_unit_bundle cu_publications_bundle express_collections_bundle express_localist_bundle cu_digital_campaign_bundle cu_mega_menu_bundle cu_livestream_bundle cu_content_sequence_bundle cu_newsletter_bundle cu_campus_news_bundle express_responsive_visibility_bundle -y`
+
 1. **Enable test content** <br />
    `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
+
+## Using SequelPro
+
+`lando info` to get the port for external connection. It changes every time you restart Lando on your project.
+
+Sequel Pro settings are: <br />
+Standard <br />
+Host: 127.0.0.1<br />
+Username: drupal7 <br />
+Password: drupal7 <br />
+Database: drupal7 <br />
+Port: Use External Port Number.  <br />
+Click 'Connect'
+
+### Importing a Database
+
+Connect to DB with SequelPro; File >> Import
+
 ## Lando Problems
+
+1. **Rebuilding a Lando Project** <br />
+`lando rebuild` <br />
+Rebuilds the lando project; can solve some problems
+`lando destroy` <br />
+Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its contents. It does not delete Drupal core or the Express Profile files cloned from GitHub. You can start over from **Step 4: Install the chosen Drupal Profile with drush.**
 
 1. **Cannot fully test WebForm** <br />
    Emails cannot be sent through Lando; nor does the recaptcha work: "ERROR for site owner:
@@ -123,10 +133,6 @@ Useful for sharing work with clients or testing local site on multiple devices. 
 
 Sadly, this does not work with our configuration at this time
 
-### Destroying a Lando Project
-`lando destroy` <br />
-Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its contents. It does not delete Drupal core or the Express Profile files cloned from GitHub. You can start over from **Step 4: Install the chosen Drupal Profile with drush.**
-
 ## Installing Lando (One Time Setup)
 
 Get Lando dmg from GitHub; run through package installation <br />
@@ -135,6 +141,7 @@ Lando config is created at ~/.lando
 **Lando Documentation** <br />
 * [https://docs.devwithlando.io/](https://docs.devwithlando.io/)
 * [https://api.drupal.org](https://api.drupal.org)
+
 
 
 [back](./)
