@@ -21,7 +21,7 @@ layout: default
 
 ### Plain Old Drupal
    Unzip Drupal 7 Tarball; rename folder to something workable like {mySiteName}. <br />
-   if PlainOldDrupal7: don't forget to copy default.settings.php to settings.php and allow write privileges <br />
+   Don't forget to copy default.settings.php to settings.php and allow write privileges <br />
    `chmod a+w sites/default`
 
 1. **Initialize Lando in project folder**<br />
@@ -129,7 +129,7 @@ Connect to DB with SequelPro; File >> Import
 
 1. **Rebuilding a Lando Project** <br />
 `lando rebuild` <br />
-Rebuilds the lando project; can solve some problems
+Rebuilds the lando project while preserving any database data; can solve some problems <br />
 `lando destroy` <br />
 Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its contents. It does not delete Drupal core or the Express Profile files cloned from GitHub. You can start over from **Step 4: Install the chosen Drupal Profile with drush.**
 
