@@ -28,7 +28,9 @@ layout: default
    (in the browser: (admin/config/people/ldap/authentication)
 
 1. **Duplicate behat.local.yml to my.behat.local.yml and update it with local environmental variables (i.e. server URL and access info)**
-   You'll use my.behat.local.yml to run local tests. It is GitIgnored.
+   Be in project root. <br />
+   `cp ../my.behat.local.yml profiles/express/tests/behat`
+   You'll use my.behat.local.yml to run local tests. It is GitIgnored. <br />
    `lando info` to verify your local server URL (`http://mySiteName.lndo.site`)<br />
    In behat folder (/profiles/express/tests/behat), edit my.behat.local.yml file and replace:
 
