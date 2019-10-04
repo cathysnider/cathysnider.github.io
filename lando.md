@@ -57,9 +57,9 @@ layout: default
 
 
 1. **Enable local login** <br />
-   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users.
+   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users. <br />
    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"` <br />
-   `lando drush en cu_local_users`
+   `lando drush en cu_local_users -y`
 
    **PlainOldDrupal7** <br />
    For local sites where you may not have LDAP ability to login, or if you are working locally without internet access, use the "drush uli" command: <br />
