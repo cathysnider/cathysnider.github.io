@@ -25,7 +25,7 @@ layout: default
    `chmod a+w sites/default`
 
 1. **Initialize Lando in project folder**<br />
-   You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder   `cd ../`  and initialize it for Lando. This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
+   You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of mySiteName folder  `cd ../`  and initialize it for Lando. This creates a .lando.yml file in your project folder. There are lots of parameters. These are ours: <br />
    `lando init`
    * codebase: cwd (current working directory)
    * recipe: drupal7
@@ -38,7 +38,7 @@ layout: default
    `lando start`  <br />
    `lando info`
 
-   From now on, all your `drush` commands must be `lando drush`.
+   From now on, all your `drush` commands start with lando: `lando drush`.
 
 1. **Install the chosen Drupal Profile with drush** <br />
    Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
@@ -123,7 +123,9 @@ Click 'Connect'
 
 ### Importing a Database
 
-Connect to DB with SequelPro; File >> Import
+`scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql .`
+Destroy previous database with `lando destroy` <br />
+Connect to SequelPro as above and import database file; File >> Import
 
 ## Lando Problems
 
