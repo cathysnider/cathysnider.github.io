@@ -93,7 +93,9 @@ Should you desire to install Drupal via the browser rather than the command line
   * Pantheon (cu_pantheon_core)
 
 
-## Install Test Content  
+## Enabling Modules  
+
+### Test Content
 
 For functional testing, you may want to install a bunch of test content.
 
@@ -107,6 +109,10 @@ For functional testing, you may want to install a bunch of test content.
 1. **Enable test content** <br />
    `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
+### Other
+
+Run update script: `lando drush updb` <br />
+Disable modules: `lando drush dis module_name`
 
 ## Using SequelPro
 
