@@ -135,11 +135,35 @@ Emails cannot be sent through Lando; nor does the recaptcha work: `ERROR for sit
 
 Run update script: `lando drush updb` <br />
 Disable modules: `lando drush dis module_name` <br />
-Variable get and set:
+Variables:
+```sh
+lando drush vget {variable_name} # find out value of variable
+lando drush vset {variable_name} {value} # set value of variable
+lando drush vdel {variable_name} # delete variable
 ```
-lando drush vget {word}
-lando drush vset {word} {value}
+
+#### Additional Site Setup
+```sh
+lando drush vset site_name 'Two Word Site Name'
+lando drush vset theme_default cusimple
+   # Choices are cusimple cuhighlight cutradition cuswatch cuspirit cushadow curise cumodern cuminimal culayers cuivory cusimple
 ```
+
+### Running Test Content again (work in progress)
+Note: So far this doesn't work
+
+Delete the Test Variables
+```
+lando drush vdel cu_test_content_beans
+lando drush vdel cu_test_content_context
+lando drush vdel cu_test_content_blocks_page
+lando drush vdel cu_test_content_pages
+```
+Disable the Test Content modules
+ `lando drush dis cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
+
+
+
 
 ## Installing Lando (One Time Setup)
 
