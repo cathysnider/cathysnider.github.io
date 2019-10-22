@@ -7,7 +7,7 @@ layout: default
 
 * If you haven’t installed Lando on your machine; now is the time to do so. See **Installing Lando** below.
 
-## Install the Codebase
+## 1. Install the Codebase
 
 #### Web Express
 
@@ -24,14 +24,14 @@ layout: default
    Don't forget to copy default.settings.php to settings.php and allow write privileges <br />
    `chmod a+w sites/default`
 
-## Initialize Lando in project folder
+## 2. Initialize Lando in project folder
 
    You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of {mySiteName} folder
    `cd ../`  
-   and initialize it for Lando. A .lando.yml file will be created in your project folder. Lando has an extensive library of parameters. These are the ones we use to start:
+   and initialize it for Lando. A *.lando.yml* file will be created in your project folder. Lando has an extensive library of parameters. These are the ones we use to start: <br />
    `lando init --source cwd --recipe drupal7  --webroot . --full --name {mySiteName}`
 
-## Start Lando; check info
+## 3. Start Lando
 
    `lando start`  
 
@@ -45,13 +45,13 @@ layout: default
 
    Use the non-secure server protocol or your browser will be unhappy.
 
-   From now on, all your `drush` commands start with lando: `lando drush`.
+   From now on, all your `drush` commands start with lando: `lando drush {drush-command}`.
 
-## Install the chosen Drupal Profile with drush
+## 4. Install the chosen Drupal Profile with drush
 
 The database name, login and password are all ‘drupal7.’
 
-Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name
+`Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name`
 
    **PlainOldDrupal7**<br />
    `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
@@ -66,11 +66,13 @@ Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --d
    `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 
-## Enable local login
+## 5. Enable local login
 
    **Web Express** <br />
-   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users. <br />
-   `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"` <br />
+   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users.
+
+   `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`
+
    `lando drush en cu_local_users -y`
 
    **PlainOldDrupal7** <br />
@@ -81,27 +83,6 @@ Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --d
 
 
 ## Done. Go have fun coding.
-
-
-
-#### Installing Drupal via the browser:
-
-Should you desire to install Drupal via the browser rather than the command line, here are the specs:
-
-* **Install Drupal via browser** <br />
-  Go to site in browser window (https://mySiteName.lndo.site); accept cert <br />
-  Go through the installation process
-   * database name: drupal7
-   * database username: drupal7
-   * database password: drupal7
-   * Advanced Options:
-     * database host: database
-     * database port: 3306
-
-* **Install Express Profile -- one of:**
-  * Production (cu-core)
-  * Testing (cu_testing_core)
-  * Pantheon (cu_pantheon_core)
 
 
 ## Additional Info
@@ -126,12 +107,12 @@ SequelPro connects to the Lando database using the external connection port. Thi
 
 **Sequel Pro settings are:** <br />
 ```
-Standard <br />
-Host: 127.0.0.1<br />
-Username: drupal7 <br />
-Password: drupal7 <br />
-Database: drupal7 <br />
-Port: Use External Port Number.
+Standard
+Host: 127.0.0.1
+Username: drupal7
+Password: drupal7
+Database: drupal7
+Port: external_connection port
 ```
 
 **Importing a Database** <br />
@@ -153,8 +134,8 @@ Emails cannot be sent through Lando; nor does the recaptcha work: `ERROR for sit
 #### Misc Drush Commands
 
 Run update script: `lando drush updb` <br />
-Disable modules: `lando drush dis module_name`
-Variable get and set: <br />
+Disable modules: `lando drush dis module_name` <br />
+Variable get and set:
 ```
 lando drush vget {word}
 lando drush vset {word} {value}
