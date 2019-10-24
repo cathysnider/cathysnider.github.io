@@ -9,6 +9,9 @@
 - link: /bash.html
   name: Bash
 
+- link: /drush.html
+    name: Drush
+
 - link: /gitcommands.html
   name: Git
 
