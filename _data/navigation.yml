@@ -10,7 +10,7 @@
   name: Bash
 
 - link: /drush.html
-    name: Drush
+  name: Drush
 
 - link: /gitcommands.html
   name: Git
