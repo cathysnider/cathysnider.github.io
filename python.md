@@ -23,6 +23,16 @@ Python lets you call functions with their named parameters named, and not in ord
 Fun facts <br />
  - `print('print this', end=' ')` 'end' parameter to use something other that default line return
 
+## Statements and Expressions
+
+A statement is a unit of execution; an expression is a unit of evaluation.
+
+In Python: <br />
+A statement is a line of code<br />
+An expression is any combination of literals, identifiers and operators; anything that returns a value
+
+
+
 ## Data Types
  - String
  - Numeric
@@ -194,7 +204,16 @@ Number types: Integers and Floats <br />
 Operators: `+` addition; `-` subtraction; `/` division; `//` division return integer; `%` division return remainder; `**` power of <br />
 Augmented Assignment Operators: `+=`; `-=`
 
+## Python Code Template
 
+```
+def main():
+  all the code here
+
+if __name__ == '__main__': main()
+```
+
+This little conditional statement is a common way of writing python. It forces the interpreter to read the entire script before it executes any of the code; allowing a more procedural style of programming.
 
 
 
