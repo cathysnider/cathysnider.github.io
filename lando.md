@@ -66,7 +66,15 @@ The database name, login and password are all ‘drupal7.’
    `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 
-## 5. Enable local login
+## 5. Tweak local settings
+
+### Set base URL
+
+   Open settings.php <br />
+   Uncomment line 315; put in local URL <br />
+   `$base_url = 'http://mysite.lndo.site';  // NO trailing slash!`
+
+### Enable local login
 
    **Web Express** <br />
    You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users.
