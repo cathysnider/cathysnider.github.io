@@ -70,9 +70,14 @@ The database name, login and password are all ‘drupal7.’
 
 ### Set base URL
 
-   Open settings.php <br />
+   ```sh
+   cd sites/default/
+   code .  # (if local machine configured to open Visual Studio Code)
+   ```
+   Edit settings.php <br />
    Uncomment line 315; put in local URL <br />
    `$base_url = 'http://mysite.lndo.site';  // NO trailing slash!`
+
 
 ### Enable local login
 
