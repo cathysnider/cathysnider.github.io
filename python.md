@@ -70,7 +70,7 @@ for myNum in countByTen:  # instantiates variable myNum as first number in the r
    print(myNum)
 ```
 ## Conditionals
-**If Elseif Else**
+**If - Elseif - Else**
 ```python
 if (condition):   # colon
     statements
@@ -79,11 +79,18 @@ elif (condition): # colon
 else:             # colon
     statements
 ```
-**Conditional Statement**
-Basically an If Else all in one line
+**Ternary aka Conditional Statement** <br />
+Basically an If Else all in one line with the condition smack dab in the middle
 `myString = "X is Bigger!" if (x < y) else "X is NOT Bigger!"`
 
-There is no Switch Case in Python.
+```
+myCondition = someThingThatEvaluates
+myTestResult = 'Do This Now' if myCondition else 'Do This Other Thing'
+print(myTestResult)
+```
+Good god; who bothered to make up the ternary conditional? They should be shot.
+
+Note: There is no Switch Case in Python.
 
 ## Loops
 Python has only two ways of doing loops: `while` and `for`
@@ -95,7 +102,7 @@ for n in range(x,y):
   statements
 ```
 
-**The For Loop**
+**The For Loop** <br />
 Other Languages: `for (i=0, i<5, i++)` <br />
 Python: `for n in range(x,y,z)` <br />
 The counter is initialized to `x` (default 0); the condition is `n<y`; the step is `z`.  <br />
