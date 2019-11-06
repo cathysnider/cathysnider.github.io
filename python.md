@@ -31,18 +31,21 @@ In Python: <br />
 A statement is a line of code<br />
 An expression is any combination of literals, identifiers and operators; anything that returns a value
 
-
-
 ## Data Types
  - String
  - Numeric
  - Boolean
  - None
  - Collections
-   - List: ordered and changeable. Allows duplicate members. `x = ['square', 'brackets']`
-   - Tuple: ordered and unchangeable. Allows duplicate members. `x = ('paren', 'theses')`
+   - List: ordered and changeable.  Allows duplicate members. Square Brackets.`x = ['square', 'brackets']`
+   - Tuple: ordered and unchangeable.  Allows duplicate members. Parentheses. `x = ('paren', 'theses')`
    - Set: unordered and unindexed. No duplicate members.
-   - Dictionary: unordered, changeable and indexed. No duplicate members.
+   - Dictionary: a searchable sequence of key/value pairs. unordered, changeable and indexed. No duplicate members. Braces.
+      ```
+       mySequence = {'one':'banana', 'two':'nectarine', 'three':'durian', 'four':'kumquat', 'five':'persimmon'}
+       for k,v in mySequence.items():
+           print('key: {}, value: {}'.format(k,v))
+      ```
  - Create your own
 
 Variables are typed at time of instantiation. Called 'Duck Typing' -- if it looks like a duck and quacks like a duck it is a duck. Clever.
@@ -60,7 +63,7 @@ Convert integer to string with str()
 
 In Python 3, all types are classes.
 
-The `range()` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number. `range(start,stop,step)` It actually stops right before the stop number. Default is `range(0,stop,1)` note that stop number MUST be supplied. <br />
+The `range(x)` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends right before specified number x. `range(startNum,stopNum,stepAmt)` It stops right before the stop number. Default is `range(0,stopNum,1)`; note that stop number MUST be supplied. <br />
 ```python
 countByTen = range(10,101,10) # starts at 10, goes up to 100 by tens
 for myNum in countByTen:  # instantiates variable myNum as first number in the range
@@ -118,9 +121,9 @@ for i,d in enumerate(days):
 Break: if condition is met, loop terminates and processing falls through to next code block.
 Continue: if condition is met, skip rest of loop for that iteration and continue from the top
 ```
-for (condition):
-   if (condition):break
-   if (condition):continue
+for condition:
+   if condition: break
+   if condition: continue
    statements
 ```
 
