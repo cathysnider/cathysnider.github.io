@@ -38,7 +38,11 @@ An expression is any combination of literals, identifiers and operators; anythin
  - Numeric
  - Boolean
  - None
- - Sequence
+ - Collections
+   - List: ordered and changeable. Allows duplicate members. `x = ['square', 'brackets']`
+   - Tuple: ordered and unchangeable. Allows duplicate members. `x = ('paren', 'theses')`
+   - Set: unordered and unindexed. No duplicate members.
+   - Dictionary: unordered, changeable and indexed. No duplicate members.
  - Create your own
 
 Variables are typed at time of instantiation. Called 'Duck Typing' -- if it looks like a duck and quacks like a duck it is a duck. Clever.
