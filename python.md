@@ -48,9 +48,7 @@ An expression is any combination of literals, identifiers and operators; anythin
       ```
  - Create your own
 
-Variables are typed at time of instantiation. Called 'Duck Typing' -- if it looks like a duck and quacks like a duck it is a duck. Clever.
-
-Variable types can be changed -- just assign a different type value to it.<br />
+Variables are typed at assignment. Called 'Duck Typing' -- if it looks like a duck and quacks like a duck it is a duck. Clever. Variable types can be changed -- just assign a different type value to it.<br />
 ```python
 variableOne = 4; # It's an integer
 print (variableOne + 3) # Returns a 7
@@ -70,7 +68,7 @@ for myNum in countByTen:  # instantiates variable myNum as first number in the r
    print(myNum)
 ```
 ## Conditionals
-**If - Elseif - Else**
+**If - Elif - Else**
 ```python
 if (condition):   # colon
     statements
@@ -80,7 +78,7 @@ else:             # colon
     statements
 ```
 **Ternary aka Conditional Statement** <br />
-Basically an If Else all in one line with the condition smack dab in the middle
+Basically an If Else all in one line with the condition smack dab in the middle <br />
 `myString = "X is Bigger!" if (x < y) else "X is NOT Bigger!"`
 
 ```
@@ -88,7 +86,7 @@ myCondition = someThingThatEvaluates
 myTestResult = 'Do This Now' if myCondition else 'Do This Other Thing'
 print(myTestResult)
 ```
-Good god; who bothered to make up the ternary conditional? They should be shot.
+Good god; who bothered to make up the ternary conditional? They should be shot. No, I take that back. It's kinda cool.
 
 Note: There is no Switch Case in Python.
 
