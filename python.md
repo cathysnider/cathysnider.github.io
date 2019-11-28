@@ -229,10 +229,97 @@ This little conditional statement is a common way of writing python. It forces t
 
 
 
+## Working with Dictionaries
 
+Dictionaries: ordered, indexed, changable, key/value pairs. Braces.  <br />
+print(dictionaryName) will print contents <br />
+```
+myCar =	{"brand": "Ford", "model": "Mustang", "year": 1964} <br />
+print(myCar)  # prints entire thing
+```
+Get value of key: <br />
+`x = myCar['brand']` returns 'Ford' <br />
+`x = myCar.get['brand']` returns 'Ford' <br />
+Change value of a key: <br />
+`myCar['year'] = '1960'` <br />
 
+Check if key is present:
+```
+if "model" in myCar:
+  print("Model is here")
+```
+How many Key/Value pairs?
+```
+x = len(myCar)
+print(x)
+```
+Add Key/Value pair by adding a Key/Value pair: <br />
+`myCar["color"] = "red" `
 
+Remove with pop() method or del keyword: <br />
+`myCar.pop("model")` or `del myCar["model"]`
 
+`myCar.clear()` cleans it out
+`newCar = myCar.copy()` makes a copy of the dictionary
+`newCar = dict(myCar)` also makes a copy of the dictionary
+
+Use For Loop to
+1) Print Key Names
+```
+for car in myCar:
+   print(car)
+```
+
+2) Print Values
+```
+for x in myCar:
+   print(myCar[x])
+
+for x in myCar.values():
+     print(x)
+```
+
+3) Print Keys and Values
+```
+for x, y in myCar.items():
+  print(x, y)
+```
+
+## Nested Dictionaries
+
+```
+child1 = {"name": "Emil", "year": 2004}
+child2 = {"name": "Tobias", "year": 2007}
+child3 = {"name": "Linus", "year": 2011}
+
+myFamily = {
+  "first": child1,
+  "second": child2,
+  "third": child3
+}
+```
+`print(myFamily)` returns entire dictionary
+
+```
+for myChild in myFamily:
+   print(myFamily[myChild])
+```
+returns the child dictionaries
+
+```
+print(myFamily["first"])
+print(myFamily["second"]["name"])
+```
+
+Iterate through a nested dictionary:
+```
+for childKey, childInfo in myFamily.items():
+    print("\nChild the", childKey)
+    for key in childInfo:
+        print(key + ':', childInfo[key])
+    for kk, vv in childInfo.items():
+        print(kk + ':', vv)
+```
 
 
 [back](./)
