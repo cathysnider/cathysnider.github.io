@@ -106,11 +106,13 @@ The database name, login and password are all ‘drupal7.’
   `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_feeds_bundle cu_seo_bundle cu_social_media_bundle -y`
 
 **All of Them** <br />
- `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_feeds_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_seo_bundle cu_social_media_bundle cu_forms_bundle cu_video_hero_unit_bundle cu_publications_bundle express_collections_bundle express_localist_bundle cu_digital_campaign_bundle cu_mega_menu_bundle cu_livestream_bundle cu_content_sequence_bundle cu_newsletter_bundle cu_campus_news_bundle express_responsive_visibility_bundle -y`
+  `lando drush en cu_advanced_content_bundle cu_advanced_design_bundle cu_advanced_layout_bundle cu_feeds_bundle cu_news_bundle cu_people_bundle cu_photo_gallery_bundle cu_seo_bundle cu_social_media_bundle cu_forms_bundle cu_video_hero_unit_bundle cu_publications_bundle express_collections_bundle express_localist_bundle cu_digital_campaign_bundle cu_mega_menu_bundle cu_livestream_bundle cu_content_sequence_bundle cu_newsletter_bundle cu_campus_news_bundle express_responsive_visibility_bundle -y`
 
 **Create test content** <br />
-   `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
+  `lando drush en cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
+**Disable the Test Content modules** <br />
+  `lando drush dis cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
 
 ## Using SequelPro
 
@@ -134,7 +136,7 @@ Connect to SequelPro as above and import database file; File » Import <br />
 `scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql .`
 
 
-#### Lando Problems
+### Lando Problems
 
 **Rebuilding a Lando Project** <br />
 `lando rebuild` : Rebuilds the lando project while preserving any database data; can solve some problems <br />
@@ -163,6 +165,7 @@ lando drush vset theme_default cusimple
 ```
 
 ### Running Test Content again (work in progress)
+
 Note: So far this doesn't work
 
 Delete the Test Variables
@@ -172,8 +175,7 @@ lando drush vdel cu_test_content_context
 lando drush vdel cu_test_content_blocks_page
 lando drush vdel cu_test_content_pages
 ```
-Disable the Test Content modules
- `lando drush dis cu_test_content_admin_bundle cu_test_content_articles cu_test_content_blocks cu_test_content_collections cu_test_content_context cu_test_content_gallery cu_test_content_pages cu_test_content_people -y`
+
 
 
 

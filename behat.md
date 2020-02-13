@@ -109,6 +109,27 @@ lando mysql
 * Log everybody out <br />
 `lando drush sqlq "TRUNCATE sessions"`
 
+### Deleting content
+
+Content must be deleted before tests can be re-run.
+
+Delete nodes:
+Install and enable Drupal module 'delete-all' in siteName/modules folder. (note: not the Web Express profile modules folder)
+`lando drush delete-all` for info
+`lando drush delete-all all --reset` sweeps all nodes, revisions and related taxonomy (You'll need to re-create homepage)
+
+Delete blocks:
+```sh
+lando mysql
+-> use drupal7;
+-> delete from bean;
+-> delete from bean_revision
+-> exit;
+```
+
+
+
+
 [CU Boulder Express: Notes on setting up Behat for local testing](https://github.com/CuBoulder/express/tree/dev/tests/behat) <br />
 [Hosted Selenium Service Can't Connect To Travis](https://github.com/CuBoulder/express/issues/3035)
 
