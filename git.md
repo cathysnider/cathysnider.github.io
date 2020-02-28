@@ -67,11 +67,29 @@ git log --since=2015-01-01 # everything since given date
 
 ### Differences
 `git diff` show file differences that **haven't been** staged
+`git difftool` open the specified tool to view diffs
 
 ## Staging and Committing
 Add changed files to staging area:<br />
 `git add .`<br />
 `git add <filename>`<br />
+
+### Commit Messages
+[How to Write Useful Commit Messages](https://dev.to/jacobherrington/how-to-write-useful-commit-messages-my-commit-message-template-20n9)
+
+The template: <br />
+```
+Summarize the change in less than 50 characters
+
+Because:
+- Explain the reasons you made this change
+- Make a new bullet for each reason
+- Each line should be under 72 characters
+
+Explain exactly what was done in this commit with more depth than the
+50 character subject line. Remember to wrap at 72 characters!
+
+```
 
 `git commit -m "Explanatory Message"` <br />
 [As the project drags on](https://xkcd.com/1296/)
