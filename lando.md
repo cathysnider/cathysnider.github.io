@@ -12,8 +12,8 @@ layout: default
 #### Web Express
 
 1. **Set up a project folder with CU Boulder Drupal 7 Express Codebase and Profile** <br />
-   Specifically, clone CU Boulder's Hardened Drupal 7 into specified project folder:<br />
-   `git clone https://github.com/CuBoulder/drupal-7.x.git {mySiteName}`
+   Specifically, CU Boulder's Hardened Drupal 7 into specified project folder:<br />
+   `git clone https://github.com/CuBoulder/d7core.git {mySiteName}`
 
    cd into profiles folder and clone down the ExpressMono profile into folder named 'express'<br />
    `cd {mySiteName}/profiles` <br />
