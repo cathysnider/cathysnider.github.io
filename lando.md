@@ -85,13 +85,13 @@ The database name, login and password are all ‘drupal7.’
    You can't login with LDAP at this time. You can either:
 
   1. Put the site in Mixed Mode and enable the CU Local Users. <br />
-    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`
+    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"` <br />
     `lando drush en cu_local_users -y`
   1.  Login with the “drush uli” command <br />
     `lando drush uli yourUserName` <br />
-    It will return a string. Grab everything from ‘user’ on and paste into the browser’s address bar.<br />
-    `user/reset/{aBunchOfNumbers}/login` and paste into browser. <br />
-    after which you may want to put the site in Mixed Mode and create a local user and login
+    It will return a string. Grab the whole thing and paste into the browser’s address bar.<br />
+    `user/reset/{aBunchOfNumbers}/login` <br />
+    after which you may want to put the site in Mixed Mode and create a local user and login.
 
    **PlainOldDrupal7** <br />
    Login with the “drush uli” command: <br />
