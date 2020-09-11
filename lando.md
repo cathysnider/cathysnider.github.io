@@ -79,20 +79,26 @@ The database name, login and password are all ‘drupal7.’
    `$base_url = 'http://mysite.lndo.site';  // NO trailing slash!`
 
 
-### Enable local login
+### Logging in
 
    **Web Express** <br />
-   You can't login with LDAP at this time. You must put the site in Mixed Mode and enable the CU Local Users.
+   You can't login with LDAP at this time. You can either:
+
+  1. Put the site in Mixed Mode and enable the CU Local Users.
 
    `lando drush php-eval "variable_set('ldap_authentication_conf', array('authenticationMode' => 1));"`
 
    `lando drush en cu_local_users -y`
 
+  1.  Login with the “drush uli” command
+   `lando drush uli yourUserName` <br />
+   It will return a string. Grab everything from ‘user’ on and paste into the browser’s address bar.<br />
+   `user/reset/{aBunchOfNumbers}/login` and paste into browser. <br />
+   after which you may want to put the site in Mixed Mode and create a local user and login
+
    **PlainOldDrupal7** <br />
    Login with the “drush uli” command: <br />
    `lando drush uli admin` <br />
-   It will return a string. Grab everything from ‘user’ on and paste into the browser’s address bar.<br />
-   `user/reset/{aBunchOfNumbers}/login`  and paste into browser.
 
 
 ## Done. Go have fun coding.
@@ -130,10 +136,16 @@ Database: drupal7
 Port: external_connection port
 ```
 
-**Importing a Database** <br />
+**Importing a Database** (TO DO: VERIFY THESE INSTRUCTIONS)<br />
 Destroy previous database with lando destroy <br />
-Connect to SequelPro as above and import database file; File » Import <br />
-`scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql .`
+or lando drush sql-drop -y <br />
+Connect to SequelPro as above and import database file; File » Import >> navigate to database
+
+Supposedly you can import via command line; still a work in progress as I haven't had any luck this way. <br />
+`lando drush sql-cli < ~/my-sql-dump-file-name.sql` <br /><br />
+
+
+`scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql `
 
 
 ### Lando Problems
