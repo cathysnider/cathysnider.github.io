@@ -133,14 +133,16 @@ Database: drupal7
 Port: external_connection port
 ```
 
-**Importing a Database** (TO DO: VERIFY THESE INSTRUCTIONS)<br />
-Destroy previous database with lando destroy <br />
-or lando drush sql-drop -y <br />
-Connect to SequelPro as above and import database file; File » Import >> navigate to database
+**Importing a Database**
+Destroy current drupal7 database and import a new one using these steps: <br />
+1. Connect to SequelPro as above; once it's destroyed you won't be able to connect
+2. Destroy drupal7 database with lando drush sql-drop -y <br />
+3. SequelPro: import database file; File » Import >> navigate to database
+
+Important: if your database requires certain modules to be enabled, be sure they are
 
 Supposedly you can import via command line; still a work in progress as I haven't had any luck this way. <br />
 `lando drush sql-cli < ~/my-sql-dump-file-name.sql` <br /><br />
-
 
 `scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql `
 
@@ -148,7 +150,7 @@ Supposedly you can import via command line; still a work in progress as I haven'
 ### Lando Problems
 
 **Rebuilding a Lando Project** <br />
-`lando rebuild` : Rebuilds the lando project while preserving any database data; can solve some problems <br />
+`lando rebuild -y` : Rebuilds the lando project while preserving any database data; can solve some problems <br />
 `lando destroy` : Destroying a project removes the Lando container and everything contained therein; i.e. your site's database and its contents. It does not delete Drupal core or the Express Profile files cloned from GitHub. You can start over from **Step 4: Install the chosen Drupal Profile with drush.**
 
 **Cannot fully test WebForm** <br />
