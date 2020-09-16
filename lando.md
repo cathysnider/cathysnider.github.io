@@ -139,7 +139,7 @@ Destroy current drupal7 database and import a new one using these steps: <br />
 2. Destroy drupal7 database with lando drush sql-drop -y <br />
 3. SequelPro: import database file; File » Import >> navigate to database
 
-Important: if your database requires certain modules to be enabled, be sure they are
+**Important:** if your database requires certain modules to be enabled, be sure they are. Otherwise your site may blackscreen.
 
 Supposedly you can import via command line; still a work in progress as I haven't had any luck this way. <br />
 `lando drush sql-cli < ~/my-sql-dump-file-name.sql` <br /><br />
