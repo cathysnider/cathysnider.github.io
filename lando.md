@@ -146,6 +146,14 @@ Supposedly you can import via command line; still a work in progress as I haven'
 
 `scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql `
 
+**Exporting a Database**
+It's nice to save all the work you've done on a site<br />
+Pics and uploads are at sites/default/files, so grab those before you delete the whole site.
+`lando drush sql-dump > ~/my-sql-dump-file-name.sql`
+
+**More Info**
+[Use Drush to Export/Import a MySQL Database Dump File](http://tylerfrankenstein.com/code/use-drush-export-import-drupal-mysql-database-dump-file)
+
 
 ### Lando Problems
 
