@@ -29,7 +29,8 @@ layout: default
    You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of {mySiteName} folder
    `cd ../`  
    and initialize it for Lando. A *.lando.yml* file will be created in your project folder. Lando has an extensive library of parameters. These are the ones we use to start: <br />
-   `lando init --source cwd --recipe drupal7  --webroot . --full --name {mySiteName}`
+   `lando init --source cwd --recipe drupal7 --webroot . --full --name {mySiteName}`
+   `lando init --source cwd --recipe drupal7 --webroot . --php 7.2 --xdebug true --full --name {mySiteName}`
 
 ## 3. Start Lando
 
