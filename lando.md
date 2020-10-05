@@ -30,7 +30,26 @@ layout: default
    `cd ../`  
    and initialize it for Lando. A *.lando.yml* file will be created in your project folder. Lando has an extensive library of parameters. These are the ones we use to start: <br />
    `lando init --source cwd --recipe drupal7 --webroot . --full --name {mySiteName}`
-   `lando init --source cwd --recipe drupal7 --webroot . --php 7.2 --xdebug true --full --name {mySiteName}`
+
+## 2.5 Modify Lando to use with XDebug and PHPStorm
+
+  According to [Lando + PhpStorm + Xdebug](https://docs.lando.dev/guides/lando-phpstorm.html#debugging-drush-commands)
+
+  Open lando.yml and under 'config' add:
+```config:
+    webroot: .
+    php: 7.2
+    xdebug: true
+    conf:
+      php: config/php.ini
+```
+  Copy your local config/php.ini file to the root of your new site.
+
+  Under services.appserver add
+```overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName={mySiteName}.lndo.site"
+```
 
 ## 3. Start Lando
 
