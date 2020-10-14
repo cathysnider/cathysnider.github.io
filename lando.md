@@ -153,23 +153,20 @@ Database: drupal7
 Port: external_connection port
 ```
 
-**Importing a Database**
+**Exporting a Site**
+To save all the work you've done on a site: <br />
+Export the database: `lando drush sql-dump > my-sql-dump-file-name.sql`
+If completely and physically destroying, save the pics and uploaded files: save the `sites/default/files` folder, as that holds all the uploaded files. <br />
+
+**Importing a Database** <br />
 Destroy current drupal7 database and import a new one using these steps: <br />
 1. Connect to SequelPro as above; once it's destroyed you won't be able to connect
-2. Destroy drupal7 database with lando drush sql-drop -y <br />
+2. Destroy drupal7 database with `lando drush sql-drop -y` <br />
 3. SequelPro: import database file; File » Import >> navigate to database
+4. Alternatively, do it with command line `lando drush sql-cli < my-sql-dump-file-name.sql`
 
 **Important:** if your database requires certain modules to be enabled, be sure they are. Otherwise your site may blackscreen.
 
-Supposedly you can import via command line; still a work in progress as I haven't had any luck this way. <br />
-`lando drush sql-cli < ~/my-sql-dump-file-name.sql` <br /><br />
-
-`scp osr-prod-util01.int.colorado.edu:/nfs/prod_backups/backups/p1f4bca2b935_2019-10-04-09-28-36.sql `
-
-**Exporting a Database**
-It's nice to save all the work you've done on a site<br />
-Pics and uploads are at sites/default/files, so grab those before you delete the whole site.
-`lando drush sql-dump > ~/my-sql-dump-file-name.sql`
 
 **More Info**
 [Use Drush to Export/Import a MySQL Database Dump File](http://tylerfrankenstein.com/code/use-drush-export-import-drupal-mysql-database-dump-file)
