@@ -9,7 +9,8 @@ layout: default
 
 ## Prep Your Project for Behat Tests (a One Time Setup)
 
-1. **Install behat dependencies** `composer install` <br />
+1. **Install behat dependencies** <br />
+   `composer install` <br />
    In behat folder (/profiles/express/tests/behat):  
 
 1. **Start Lando** <br />
