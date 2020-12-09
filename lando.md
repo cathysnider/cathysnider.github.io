@@ -31,26 +31,6 @@ layout: default
    and initialize it for Lando. A *.lando.yml* file will be created in your project folder. Lando has an extensive library of parameters. These are the ones we use to start: <br />
    `lando init --source cwd --recipe drupal7 --webroot . --full --name {mySiteName}`
 
-## 2.5 Modify Lando to use with XDebug and PHPStorm
-
-  According to [Lando + PhpStorm + Xdebug](https://docs.lando.dev/guides/lando-phpstorm.html#debugging-drush-commands)
-
-  Open lando.yml and under 'config' add:
-```config:
-    webroot: .
-    php: 7.2
-    xdebug: true
-    conf:
-      php: config/php.ini
-```
-  Copy your local config/php.ini file to the root of your new site.
-
-  Under services.appserver add
-```overrides:
-      environment:
-        PHP_IDE_CONFIG: "serverName={mySiteName}.lndo.site"
-```
-
 ## 3. Start Lando
 
    `lando start`  
@@ -85,6 +65,24 @@ The database name, login and password are all ‘drupal7.’
    **Express cu_pantheon_core** <br />
    `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
+## 2.5 Modify Lando to use with XDebug and PHPStorm
+
+  According to [Lando + PhpStorm + Xdebug](https://docs.lando.dev/guides/lando-phpstorm.html#debugging-drush-commands)
+
+  Open lando.yml and under 'config' add:
+   ```config:
+       webroot: .
+       php: 7.2
+       xdebug: true
+       conf:
+         php: config/php.ini
+   ```
+  Copy your local config/php.ini file to the root of your new site.
+
+  Under services.appserver.overrides.environment add
+   ```
+   PHP_IDE_CONFIG: "serverName={mySiteName}.lndo.site"
+   ```
 
 ## 5. Tweak local settings
 
@@ -96,7 +94,7 @@ The database name, login and password are all ‘drupal7.’
    ```
    Edit settings.php <br />
    Uncomment line 315; put in local URL <br />
-   `$base_url = 'http://mysite.lndo.site';  // NO trailing slash!`
+   `$base_url = 'http://mySiteName.lndo.site';  // NO trailing slash!`
 
 
 ### Logging in
@@ -150,7 +148,7 @@ Host: 127.0.0.1
 Username: drupal7
 Password: drupal7
 Database: drupal7
-Port: external_connection port
+Port: external_connection port number, from above
 ```
 
 **Exporting a Site**
