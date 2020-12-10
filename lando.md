@@ -22,7 +22,7 @@ layout: default
 #### Plain Old Drupal
    Unzip Drupal 7 Tarball; rename folder to something workable like {mySiteName}. <br />
    Don't forget to copy default.settings.php to settings.php and allow write privileges <br />
-   `chmod a+w sites/default`
+   `chmod -R a+w sites/default`
 
 ## 2. Initialize Lando in project folder
 
@@ -65,7 +65,7 @@ The database name, login and password are all ‘drupal7.’
    **Express cu_pantheon_core** <br />
    `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-## 2.5 Modify Lando to use with XDebug and PHPStorm
+## 4.5 Modify Lando to use with XDebug and PHPStorm
 
   According to [Lando + PhpStorm + Xdebug](https://docs.lando.dev/guides/lando-phpstorm.html#debugging-drush-commands)
 
