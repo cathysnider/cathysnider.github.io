@@ -122,14 +122,16 @@ The database name, login and password are all ‘drupal7.’
 
 ## Optional Site Setup
 
-Turn on Theme Debug mode `lando drush vset theme_debug 1` <br />
-More Info: https://drupal.stackexchange.com/questions/236168/is-there-any-template-debugging-technique-similar-to-twig-debugging/236169
+Turn on Theme Debug mode <br />
+`lando drush vset theme_debug 1` <br />
+More Info: [Stack Exchange Drupal Answers Template Debugging](https://drupal.stackexchange.com/questions/236168/is-there-any-template-debugging-technique-similar-to-twig-debugging/236169)
 
 ```sh
 lando drush vset site_name 'Two Word Site Name'
 lando drush vset theme_default cusimple
-     # Choices are cusimple cuhighlight cutradition cuswatch cuspirit cushadow curise cumodern cuminimal culayers cuivory cusimple
 ```
+Options: cuhighlight cutradition cuswatch cuspirit cushadow curise cumodern cuminimal culayers cuivory cusimple
+
 
 #### Enabling the bundles
 
