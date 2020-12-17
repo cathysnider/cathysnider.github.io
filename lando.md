@@ -119,7 +119,16 @@ The database name, login and password are all ‘drupal7.’
 ## Done. Go have fun coding.
 
 
-## Additional Info
+## Optional Site Setup
+
+Turn on Theme Debug mode `lando drush vset theme_debug 1` <br />
+More Info: https://drupal.stackexchange.com/questions/236168/is-there-any-template-debugging-technique-similar-to-twig-debugging/236169
+
+```sh
+lando drush vset site_name 'Two Word Site Name'
+lando drush vset theme_default cusimple
+     # Choices are cusimple cuhighlight cutradition cuswatch cuspirit cushadow curise cumodern cuminimal culayers cuivory cusimple
+```
 
 #### Enabling the bundles
 
@@ -165,7 +174,6 @@ Destroy current drupal7 database and import a new one using these steps: <br />
 
 **Important:** if your database requires certain modules to be enabled, be sure they are. Otherwise your site may blackscreen.
 
-
 **More Info**
 [Use Drush to Export/Import a MySQL Database Dump File](http://tylerfrankenstein.com/code/use-drush-export-import-drupal-mysql-database-dump-file)
 
@@ -191,12 +199,6 @@ lando drush vset {variable_name} {value} # set value of variable
 lando drush vdel {variable_name} # delete variable
 ```
 
-#### Additional Site Setup
-```sh
-lando drush vset site_name 'Two Word Site Name'
-lando drush vset theme_default cusimple
-   # Choices are cusimple cuhighlight cutradition cuswatch cuspirit cushadow curise cumodern cuminimal culayers cuivory cusimple
-```
 
 ### Running Test Content again (work in progress)
 
