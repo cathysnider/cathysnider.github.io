@@ -24,6 +24,10 @@ layout: default
    Don't forget to copy default.settings.php to settings.php and allow write privileges <br />
    `chmod -R a+w sites/default`
 
+#### Drupal 9
+    `lando init --source remote --remote-url https://www.drupal.org/download-latest/tar.gz --remote-options="--strip-components 1"  --recipe drupal9 --webroot . --name {mySiteName}`
+
+
 ## 2. Initialize Lando in project folder
 
    You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of {mySiteName} folder
