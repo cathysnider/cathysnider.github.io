@@ -25,7 +25,8 @@ layout: default
    `chmod -R a+w sites/default`
 
 #### Drupal 9
-    `lando init --source remote --remote-url https://www.drupal.org/download-latest/tar.gz --remote-options="--strip-components 1"  --recipe drupal9 --webroot . --name {mySiteName}`
+   With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one step.
+  `lando init --source remote --remote-url https://www.drupal.org/download-latest/tar.gz --remote-options="--strip-components 1"  --recipe drupal9 --webroot . --name {mySiteName}`
 
 
 ## 2. Initialize Lando in project folder
@@ -57,17 +58,20 @@ The database name, login and password are all ‘drupal7.’
 
 `Syntax: lando drush si my_profile_name my_profile_form.my_settings.key=value --db-url=mysql//admin_user:admin_password@db_host:db_port/database_name`
 
-   **PlainOldDrupal7**<br />
-   `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+  **PlainOldDrupal7**<br />
+  `lando drush si standard --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-   **Express cu_core** <br />
-   `lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+  **PlainOldDrupal9**<br />
+  `lando drush si standard --db-url=mysql://drupal9:drupal9@database:3306/drupal9 -v -y`
 
-   **Express cu_testing_core** <br />
-   `lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+  **Express cu_core** <br />
+  `lando drush si express express_profile_configure_form.options.cu_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
-   **Express cu_pantheon_core** <br />
-   `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+  **Express cu_testing_core** <br />
+  `lando drush si express express_profile_configure_form.options.cu_testing_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
+
+  **Express cu_pantheon_core** <br />
+  `lando drush si express express_profile_configure_form.options.cu_pantheon_core --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -v -y`
 
 ## 4.5 Modify Lando to use with XDebug and PHPStorm
 
