@@ -25,7 +25,7 @@ layout: default
    `chmod -R a+w sites/default`
 
 #### Drupal 9
-   With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one step.
+   With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one five-minute step. <br />
   `lando init --source remote --remote-url https://www.drupal.org/download-latest/tar.gz --remote-options="--strip-components 1"  --recipe drupal9 --webroot . --name {mySiteName}`
 
 
