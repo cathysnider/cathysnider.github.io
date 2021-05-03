@@ -4,13 +4,16 @@
   name: Home
 
 - link: /markdown.html
-  name: Markdown
+  name: M/D
 
 - link: /bash.html
   name: Bash
 
 - link: /drush.html
   name: Drush
+
+- link: /composer.html
+  name: Composer
 
 - link: /git.html
   name: Git
@@ -19,10 +22,10 @@
   name: PHP
 
 - link: /python.html
-  name: Python
+  name: Py
 
 - link: /languages.html
-  name: Languages
+  name: LangComp
 
 - link: /lando.html
   name: Lando
