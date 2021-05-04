@@ -25,13 +25,16 @@ layout: default
    `chmod -R a+w sites/default`
 
 #### Drupal 9
-   With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one five-minute step. <br />
-   `mkdircd {mySiteName}` <br />
-  `lando init --source remote --remote-url https://www.drupal.org/download-latest/tar.gz --remote-options="--strip-components 1"  --recipe drupal9 --webroot . --name {mySiteName}` <br />
-  `cd {mySiteName}` < br/>
-  `lando start`
-
-
+  With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one five-minute step. <br />
+  ```
+  composer create-project drupal/recommended-project myNewSite
+  cd myNewSite
+  composer require drush/drush
+  lando init --source cwd --recipe drupal9 --webroot web  --drush true --full --name myNewSite
+  lando start
+  lando drush site:install standard --db-url=mysql://drupal9:drupal9@database:3306/drupal9 --account-name=admin --account-pass=admin  -v -y
+  lando drush upwd admin "admin"
+  ```
 ## 2. Initialize Lando in project folder
 
    You must initialize Lando before you can go further, since Lando spins up the database that our site will be using. Go back to root of {mySiteName} folder

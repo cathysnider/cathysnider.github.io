@@ -80,8 +80,8 @@ Your project is now ready to run the automated tests.
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    The basic command is <br />
-   `./bin/behat --config my.behat.local.yml` <br />
-   `./bin/behat --config my.behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'` <br />
+   `./bin/behat --config behat.local.yml` <br />
+   `./bin/behat --config behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'` <br />
 
    Add other parameters as necessary: <br />
    ```sh
