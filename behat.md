@@ -115,7 +115,8 @@ Content must be deleted before tests can be re-run.
 Delete nodes:
 Install and enable Drupal module 'delete-all' in siteName/modules folder. (note: not the Web Express profile modules folder)
 `lando drush delete-all` for info
-`lando drush delete-all all --reset` sweeps all nodes, revisions and related taxonomy (You'll need to re-create homepage)
+`lando drush delete-all all --reset` sweeps all nodes, revisions and related taxonomy <br />
+**(You'll need to re-create homepage)**
 
 Delete blocks:
 ```sh
