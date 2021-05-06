@@ -18,7 +18,11 @@ layout: default
    `lando start` <br />
    You need the Lando container for the rest of this.
 
-1. **Install Behat test module**  <br />
+1. **Install modules for testing**  <br />
+   `lando drush dl delete_all` <br />
+   `lando drush en delete_all -y` <br />
+   Downloads Delete_All modules to /app/sites/all/modules/delete_all folder. This module makes it easy to delete all test content before starting tests over.
+
    `lando drush en cu_behat_tests -y` <br/>
    This module enables all the bundles and installs local users. Go stretch your legs while it all installs.
 
@@ -65,10 +69,6 @@ Your project is now ready to run the automated tests.
 
 ### Start the Servers
 
-**DEPRECATED**
-1. **Start Sauce Proxy Server** <br />
-   cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Same info as in my.behat.local.yml; get from a team member)<br />
-
 1. **Stop and Start Lando** <br />
    If you forgot to Cntl-C the server last night, you'll have to force it to quit by stopping and starting Lando. Otherwise the next command may have trouble. <br />
    `lando stop` <br />
@@ -82,13 +82,17 @@ Your project is now ready to run the automated tests.
   From project root: <br />
   `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --crash-dumps-dir=/tmp`
 
+**DEPRECATED**
+1. **Start Sauce Proxy Server** <br />
+  cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Same info as in my.behat.local.yml; get from a team member)
+
 ### Run the Tests
 
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    The basic command is <br />
    `./bin/behat --config my.behat.local.yml` <br />
-   `./bin/behat --config my.behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'` <br />
+   `./bin/behat --config my.behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'`
 
    Add other parameters as necessary: <br />
    ```sh
@@ -97,26 +101,12 @@ Your project is now ready to run the automated tests.
    --stop-on-failure
    --tags '@runThisTag'
    ```
-
    Tags: specify desired tag(s) either as parameters in the command or in my.behat.local.yml <br />
    Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
 
 **DEPRECATED**
 1. **Login to Sauce Connect website to view JS tests**<br />
    [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) should you need to review what's going on with JavaScript. The login credentials are shared with the team via LastPass.
-
-
-## Troubleshooting
-
-* If too many failed login attempts, empty the flood table.
-```sh
-lando mysql
--> use drupal7;
--> delete from flood;
--> exit;
-```
-* Log everybody out <br />
-`lando drush sqlq "TRUNCATE sessions"`
 
 ### Deleting content
 
@@ -136,6 +126,17 @@ lando mysql
 -> exit;
 ```
 
+## Troubleshooting
+
+* If too many failed login attempts, empty the flood table.
+```sh
+lando mysql
+-> use drupal7;
+-> delete from flood;
+-> exit;
+```
+* Log everybody out <br />
+`lando drush sqlq "TRUNCATE sessions"`
 
 
 
