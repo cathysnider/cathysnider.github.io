@@ -123,7 +123,8 @@ Delete blocks:
 lando mysql
 -> use drupal7;
 -> delete from bean;
--> delete from bean_revision
+-> delete from bean_revision;
+-> delete from embed_templates;
 -> exit;
 ```
 
