@@ -10,8 +10,9 @@ layout: default
 ## Prep Your Project for Behat Tests (a One Time Setup)
 
 1. **Install behat dependencies** <br />
-   `composer install` <br />
-   In behat folder (/profiles/express/tests/behat):  
+  `cd profiles/express/tests/behat` <br />
+   `composer install`
+
 
 1. **Start Lando** <br />
    `lando start` <br />
@@ -29,16 +30,16 @@ layout: default
    (in the browser: (admin/config/people/ldap/authentication)
 
 1. **Duplicate behat.local.yml to my.behat.local.yml and update it with local environmental variables (i.e. server URL and access info)**
-   Be in project root. <br />
-   `cp ../my.behat.local.yml profiles/express/tests/behat`
+   In profiles/express/tests/behat <br />
+   `cp behat.local.yml my.behat.local.yml`
    You'll use my.behat.local.yml to run local tests. It is GitIgnored. <br />
    `lando info` to verify your local server URL (`http://mySiteName.lndo.site`)<br />
-   In behat folder (/profiles/express/tests/behat), edit my.behat.local.yml file and replace:
+   Edit my.behat.local.yml file and replace:
 
       ```yml
       extensions:
        Behat\MinkExtension:
-        base_url: "http://127.0.0.1:8079/"
+        base_url: "yourLocalUrl"
       ```
 
       With your localhost site address:
@@ -49,6 +50,7 @@ layout: default
         base_url: "http://mySiteName.lndo.site"
       ```
 
+    **DEPRECATED**
       You'll need to add the Environmental Variables username and access key to the session called 'sauce'. (Get these from a team member.)
       ``` yml
       sauce:
@@ -63,6 +65,7 @@ Your project is now ready to run the automated tests.
 
 ### Start the Servers
 
+**DEPRECATED**
 1. **Start Sauce Proxy Server** <br />
    cd to {sauce-labs-proxy-folder} and run `bin/sc -u USER-NAME -k ACCESS-KEY` (Same info as in my.behat.local.yml; get from a team member)<br />
 
@@ -75,13 +78,17 @@ Your project is now ready to run the automated tests.
    From project root: <br />
    `lando drush runserver 127.0.0.1:8079`
 
+1. **Start Chrome Headless Browser** <br />
+  From project root: <br />
+  `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --crash-dumps-dir=/tmp`
+
 ### Run the Tests
 
 1. **Run the tests** <br />
    From behat folder (/profiles/express/tests/behat), run behat command.  <br />
    The basic command is <br />
-   `./bin/behat --config behat.local.yml` <br />
-   `./bin/behat --config behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'` <br />
+   `./bin/behat --config my.behat.local.yml` <br />
+   `./bin/behat --config my.behat.local.yml --verbose --strict --stop-on-failure --tags '@runThisTag'` <br />
 
    Add other parameters as necessary: <br />
    ```sh
@@ -94,6 +101,7 @@ Your project is now ready to run the automated tests.
    Tags: specify desired tag(s) either as parameters in the command or in my.behat.local.yml <br />
    Behat will run the goutte tests first, then will come back and run those tagged with `@javascript`
 
+**DEPRECATED**
 1. **Login to Sauce Connect website to view JS tests**<br />
    [Login to Sauce Connect Tunnel](https://app.saucelabs.com/login) should you need to review what's going on with JavaScript. The login credentials are shared with the team via LastPass.
 
