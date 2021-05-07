@@ -80,7 +80,9 @@ Your project is now ready to run the automated tests.
 
 1. **Start Chrome Headless Browser** <br />
   From project root: <br />
-  `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --crash-dumps-dir=/tmp`
+  ```
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --crash-dumps-dir=/tmp --user-data-dir="$HOME/Library/Application Support/Google/Chrome" 
+  ```
 
 **DEPRECATED**
 1. **Start Sauce Proxy Server** <br />
