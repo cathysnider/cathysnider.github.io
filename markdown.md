@@ -20,16 +20,6 @@ Starting a line with a hash `#` and a `space` makes a header.
 
 The more `#`, the smaller the header.
 
-## Links
-
-Square brackets with link text + parenthesis with link URL.
-
-```
-[My Repositories](https://github.com/cathysnider/)
-```
-
-[My Repositories](https://github.com/cathysnider/)
-
 ## Tables
 
 Create tables with pipes `|` and hyphens `-`. Pipes separate columns and hyphens signify the column headers.  You must include a blank line before each table row in order for it to correctly render. See [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables).
@@ -84,6 +74,16 @@ Wrap text with asterisks `*` or underscores `_`, single for italics and double f
 * `**` This text will be bold `**`
 
 Escape with a backslash `\*` or `\_` if you want the asterisks/underscores to be themselves.
+
+## Links
+
+Square brackets with link text + parenthesis with link URL.
+
+```
+[My Repositories](https://github.com/cathysnider/)
+```
+
+[My Repositories](https://github.com/cathysnider/)
 
 ## Graphics
 

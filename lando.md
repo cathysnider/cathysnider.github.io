@@ -107,8 +107,17 @@ The database name, login and password are all ‘drupal7.’
    code .  # (if local machine configured to open Visual Studio Code)
    ```
    Edit settings.php <br />
-   Uncomment line 315; put in local URL <br />
-   `$base_url = 'http://mySiteName.lndo.site';  // NO trailing slash!`
+   DRUPAL 7: Uncomment line 315; put in local URL <br />
+   `$base_url = 'http://mysitename.lndo.site';  // NO trailing slash!`
+   
+   DRUPAL 9: Add trusted host pattern (include localhost for local installs): <br />
+   ```
+   $settings['trusted_host_patterns'] = [
+   '^mysitename\.lndo\.site$',
+   '^localhost$',
+    ];
+    ```
+
 
 
 ### Logging in
