@@ -25,7 +25,8 @@ layout: default
    `chmod -R a+w sites/default`
 
 #### Drupal 9
-  With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one five-minute step. <br />
+  With this one, we pull the latest Drupal Tarball from Drupal.org and initialize Lando all in one five-minute step.
+  
   ```
   composer create-project drupal/recommended-project myNewSite
   cd myNewSite
@@ -91,6 +92,7 @@ The database name, login and password are all ‘drupal7.’
        conf:
          php: config/php.ini
    ```
+  
   Copy your local config/php.ini file to the root of your new site.
 
   Under services.appserver.overrides.environment add
@@ -110,15 +112,14 @@ The database name, login and password are all ‘drupal7.’
    DRUPAL 7: Uncomment line 315; put in local URL <br />
    `$base_url = 'http://mysitename.lndo.site';  // NO trailing slash!`
    
-   DRUPAL 9: Add trusted host pattern (include localhost for local installs): <br />
+   DRUPAL 9: Add trusted host pattern (include localhost for local installs): 
    ```
    $settings['trusted_host_patterns'] = [
    '^mysitename\.lndo\.site$',
    '^localhost$',
     ];
-    ```
-
-
+    
+   ```
 
 ### Logging in
 
